@@ -28,9 +28,10 @@ What is functional css
 * Functional CSS is fundamentally all about moving complexity out of stylesheets and into templates (components). Scaling CSS is all about reducing complexity in my opinion. Scaling CSS is much harder than scaling templates or components, so moving the complexity there makes sense.
 
 Good things about Functional CSS
-* Performance: People focus on performance as the biggest advantage of functional css, but honestly, meh? There are more important benefits in my opinion that we'll get to. That said, cacheability and stuff etc
+* Performance: People focus on performance as the biggest advantage of functional css, but honestly, meh? There are more important benefits in my opinion that we'll get to. That said, cacheability and stuff etc. The biggest most important thing is how functional css makes your styles insanely scalable, and even portable.
 * Simplicity: every class does one thing and only one thing. A developer can leave and you can decode their styles. Imagine that!
 * Speed: Don't have to think about naming, no fear in adding and removing classes. 
+* Safe/Comfortable: It's safer to add and remove classes to an html node than it is to add and remove styles to a class like .card or something. This is why styles get duplicated and CSS bloats in teams.
 * Easy to document: Because each class only does one thing, documentaiton becomes much easier to generate.
 * More flexible: So you've got a great little button component, and it does the job of being button very well. But then we need to change the color from blue to a minty green, cool, just change the background on the button class. But we need some buttons to stay blue, so then we have to add a button modifier class. Add enough of those up, and it becomes a disaster. With functional css, that becomes a find and replace option. Tedious possibly, but complex it is not. I'd rather trade a moments tedium for less complexity.
 * Possible to transition gradually. You can start converting components to use a functional model and roll it out gradually.
@@ -41,7 +42,10 @@ Good things about Functional CSS
 
 
 Bad things that aren't actually bad
-* Lots of classes make HTML ugly. Yes, but less ugly than a wall of spaghetti css. ryan air pic from here https://css-tricks.com/growing-popularity-atomic-css/
+* Lots of classes make HTML ugly. Yes, but less ugly than a wall of spaghetti css. ryan air pic from here https://css-tricks.com/growing-popularity-atomic-css/. Rely on components or template partials to tell you what a component is. You often hear folks saying proper class names describe what a component is, not what it does or what it looks like. The problem with relying on a CSS class name for that is that it colocates component naming with presentation. Using templates or components is a good idea because it moves those two concepts into separate contexts.
+* Hard to know what your options are: I'd argue that reading HTML or your CSS source to know what classes are available to you isn't the best way to go about things, that's what styleguides and documentation pages are for. Functional CSS makes documenation generation super duper simple because there aren't components and cases to mock up, just classes that do a single thing.
+* Specificity/The cascade is a feature, not a bug: Folks get up in arms because this "isn't how you write css" learn to use specificity to your advantage and you get cleaner HTML and clean, maintainable CSS. But part of being able to scale your css along with your app and team is minimizing footguns. Specificity is a footgun. A lot of times this is framed as not a CSS problem, not a system problem, but a human problem. If folks were just better at CSS and communicated better while building their product, this wont be an issue. That's like saying that traffic lights shouldn't exist, we should just be better drivers and communicate better with each other.
+
 
 
 
@@ -73,6 +77,9 @@ https://github.com/chibicode/react-functional-css-protips
 http://mrmrs.github.io/writing/2016/03/24/scalable-css/
 https://jon.gold/2015/07/functional-css/
 https://marcelosomers.com/writing/rationalizing-functional-css/
+https://medium.freecodecamp.org/in-defense-of-utility-first-css-4f406acee6fb
+this is some type of bullshit http://www.zeldman.com/2017/01/03/kiss-my-classname/
+http://cssmojo.com/opinions_of_leaders_considered_harmful/
 
 ## Frameworks
 http://tachyons.io/
