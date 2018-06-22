@@ -27,6 +27,7 @@
     "lodash.set": "^4.3.2",
     "lodash.uniqueid": "^4.0.1",
     "normalize.css": "7.0.0",
+    "prismjs": "^1.15.0",
     "prop-types": "^15.6.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",

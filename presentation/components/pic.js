@@ -11,7 +11,7 @@ class Pic extends React.Component {
       minWidth: '40vw',
     };
     const portraitStyle = this.props.portrait ? {
-      maxHeight: 600,
+      maxHeight: '60vh',
       width: 'auto',
       maxWidth: 'none',
       minWidth: 'none',

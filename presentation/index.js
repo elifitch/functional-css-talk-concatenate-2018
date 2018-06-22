@@ -46,14 +46,15 @@ import Pic from './components/pic';
 import Vid from './components/vid';
 import Footer from './components/footer';
 import LoginModal from './components/login-modal';
+import BouncingBall from './components/bouncing-ball';
+import Confetti from './components/confetti';
+import CodeExample from './components/code-example';
 import LogoRowSlide from './slides/logo-row-slide';
 import EarthPointerSlide from './slides/earth-pointer-slide';
 import DorsalVentralBrain from './slides/dorsal-ventral-brain';
 import ProgressBarDemo from './slides/progress-bar-demo';
-import BouncingBall from './components/bouncing-ball';
 import PapyrusSlide from './slides/papyrus-slide';
 import ThankYouSlide from './slides/thank-you-slide';
-import Confetti from './components/confetti';
 
 require('normalize.css');
 
@@ -123,9 +124,82 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Scaling CSS is <Bounce><Stroke>HARD</Stroke>.</Bounce></H>
+            <H>Scaling CSS is <Bounce>easy</Bounce><Bounce>?</Bounce></H>
+            <Notes>
+
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Annot>Some example of complex CSS.</Annot>
             <Notes>
               
+            </Notes>
+          </Slide>
+          {/* <Slide>
+            <CodeExample
+              source={`
+.foo {
+  bar: 'baz'
+}
+              `}
+            />
+            <Notes>
+              
+            </Notes>
+          </Slide> */}
+          <Slide>
+            <Annot>But then I need to make [[[some change]]]</Annot>
+            <Annot>And then it gets even uglier</Annot>
+            <Annot>And everything falls apart.</Annot>
+            <Notes>
+
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>So it turns out scaling CSS is <Bounce>hard.</Bounce></H>
+            <H><Bounce>Really hard.</Bounce></H>
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Hsmall><Bounce>Naming collisions</Bounce></Hsmall>
+            <Hsmall><Bounce>Specificity creep</Bounce></Hsmall>
+            <Hsmall><Bounce>Deletion anxiety</Bounce></Hsmall>
+            <Hsmall>others...</Hsmall>
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Pic src="peter-griffin-css.gif" />
+            <Notes>
+              Who's felt this way before? This famous gif really illustrates the struggle that I'm sure so many of us have faced
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>I forgot this was a thing.</H>
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Pic src="oops.gif" portrait style={{height: '60vh'}} />
+            <Notes>
+
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>I have a <Stroke>terrible</Stroke> confession to make.</H>
+            <Notes>
+              I have a terrible confession to make. I haven't really thought about the struggles of scaling CSS in more than a year.
             </Notes>
           </Slide>
 

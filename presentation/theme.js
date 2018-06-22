@@ -31,6 +31,7 @@ export const islBlue = '#43d8f8';
 
 // export const contentWidth = 1400;
 export const contentWidth = 2000;
+export const h1FontSize = '12.5rem';
 
 export const underline = css`
   display: inline;
@@ -107,6 +108,12 @@ mutableTheme.extendComponent = (pathToComponent, style) => {
 };
 
 mutableTheme = mutableTheme
+
+  .extendComponent(['codePane'], {
+    fontSize: '2.5rem',
+    minWidth: '60%',
+    maxWidth: 800,
+  })
   .extendComponent(['quote'], {
     borderLeft: `4px solid ${pink}`,
     color: nearBlack,
@@ -122,7 +129,7 @@ mutableTheme = mutableTheme
     fontFamily: 'pinopolis',
   })
   .extendComponent(['heading', 'h1'], {
-    fontSize: '12.5rem',
+    fontSize: h1FontSize,
   })
   .extendComponent(['heading', 'h2'], {
     fontSize: '10rem',

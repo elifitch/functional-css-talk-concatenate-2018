@@ -204,7 +204,6 @@ class Confetti extends React.Component {
     const { canvas } = this;
     requestAnimationFrame(this.shootConfetti);
     if (this.shoot) {
-      console.log('hi')
       this.addConfettiParticles(10, 270, 5000, canvas.width, canvas.height);
     }
   }
