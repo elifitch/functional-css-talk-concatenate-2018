@@ -8,6 +8,7 @@ class Pic extends React.Component {
   render() {
     const source = require(`../../assets/${this.props.src}`);
     const baseStyle = {
+      maxHeight: '75vh',
       minWidth: '40vw',
     };
     const portraitStyle = this.props.portrait ? {

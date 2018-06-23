@@ -58,6 +58,7 @@ import DorsalVentralBrain from './slides/dorsal-ventral-brain';
 import ProgressBarDemo from './slides/progress-bar-demo';
 import PapyrusSlide from './slides/papyrus-slide';
 import ThankYouSlide from './slides/thank-you-slide';
+import WoodyBuzzZoomPan from './slides/woody-buzz-zoom-pan';
 
 require('normalize.css');
 
@@ -194,7 +195,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Pic src="oops.gif" portrait style={{height: '60vh'}} />
+            <Pic src="oops.gif" portrait style={{ height: '60vh' }} />
             <Notes>
               Since I started a new job about a year ago, I just haven't had to think about these problems.
             </Notes>
@@ -277,7 +278,32 @@ export default class Presentation extends React.Component {
               ]}
             />
             <Notes>
-              Assembly is a css framework we use at mapbox. It's open source, you're 100% free to use it, but it's made mostly for us, so I wouldn't advertise it as the greatest thing to build your app off of unless you really want it to look like mapbox
+              Assembly is a css framework we built and use at mapbox. It's primarily the brainchild of David Clark, of Stylelint fame, and 
+              Saman Bemel-Benrud, if you don't know about him, he's done as much for radically custom interactive map design as anybody on 
+              the planet.
+              
+              Assembly is open source, you're 100% free to use it, I really enjoy it and feel 
+              like it's very very well documented, but it's not been designed for widespread use, and I'm not here to tell 
+              you to use assembly on your apps, but rather why embracing the paradigms that led us to create assembly work 
+              well for us, and why they might work well for you too.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Pic src="functional-atomic.png" />
+            <Annot>[[animated half life 3 confirmed joke here could be funny?]]</Annot>
+            <Notes>
+              That paradigm is "functional css", which basically means, classes only do one very small thing, and you compose them
+              together to make larger things, just like functional programming. This is also sometimes -- often? -- called atomic
+              css. I avoid this term because it's often conflated with the atomic css library, and the atomic design pattern coined
+              by brad frost.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <WoodyBuzzZoomPan />
+            <Notes>
+              
             </Notes>
           </Slide>
 
