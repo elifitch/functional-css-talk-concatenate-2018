@@ -111,8 +111,8 @@ mutableTheme = mutableTheme
 
   .extendComponent(['codePane'], {
     fontSize: '2.5rem',
-    minWidth: '60%',
-    maxWidth: 800,
+    minWidth: '75%',
+    maxWidth: 1000,
   })
   .extendComponent(['quote'], {
     borderLeft: `4px solid ${pink}`,

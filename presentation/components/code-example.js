@@ -12,6 +12,8 @@ function CodeExample({ source, lang }) {
       source={source}
       className={css`
         padding: 0rem 2rem !important;
+        max-height: 75vh;
+        overflow: auto;
       `}
     />
   );
@@ -23,7 +25,7 @@ CodeExample.defaultProps = {
 
 CodeExample.propTypes = {
   source: PropTypes.string.isRequired,
-  lang: PropTypes.number,
+  lang: PropTypes.string,
 };
 
 export default CodeExample;
