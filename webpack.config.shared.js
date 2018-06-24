@@ -22,6 +22,11 @@ module.exports = {
       loader: "file-loader",
       include: path.join(__dirname, "assets")
     },
+    {
+      test: /\.(example)$/,
+      loader: "raw-loader",
+      include: path.join(__dirname, "presentation/code-examples")
+    }
   ],
   plugins: [
     new HtmlWebpackPlugin({

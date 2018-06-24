@@ -11,9 +11,12 @@ function CodeExample({ source, lang }) {
       lang={lang}
       source={source}
       className={css`
-        padding: 0rem 2rem !important;
         max-height: 75vh;
         overflow: auto;
+        .prism-code {
+          white-space: pre !important;
+          padding: 0.5em 1em !important;
+        }
       `}
     />
   );

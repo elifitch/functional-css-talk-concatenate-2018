@@ -1,0 +1,15 @@
+<a href="/" class="link-bar">
+  <div class="link-bar__content-container">
+    <div>
+      <p class="link-bar__heading">Customize a map style</p>
+      <p class="link-bar__content">Use the style editor to design custom maps.</p>
+      <span class="link-bar__cta">
+        Create a style
+        <img src="..." />
+      </span>
+    </div>
+  </div>
+  <figure class="link-bar__icon-container">
+    <img src="..." class="link-bar__icon" />
+  </figure>
+</a>

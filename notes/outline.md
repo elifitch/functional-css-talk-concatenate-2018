@@ -38,13 +38,14 @@ Good things about Functional CSS
 * No side effects! Every class does exactly what it says on the tin, and no more.
 * Immutable. Because you are not allowed to override a CSS rule, you can have absolute confidence about the rule you're applying.
 * NOTE: actually isn't this whole deal all about confidence? Immutability/Side effects/simplicity/flexbility/documentation? Maybe it's worth focusing on the sense of confidence, safety, security, no fear CSS. I think this should be the direction. Functional CSS is about safety, confidence, swagger, comfort, fun, whatever.
+* Puts complexity where it belongs: Easier to manage complexity in components than stylesheets
 
 
 
 Bad things that aren't actually bad
 * Lots of classes make HTML ugly. Yes, but less ugly than a wall of spaghetti css. ryan air pic from here https://css-tricks.com/growing-popularity-atomic-css/. Rely on components or template partials to tell you what a component is. You often hear folks saying proper class names describe what a component is, not what it does or what it looks like. The problem with relying on a CSS class name for that is that it colocates component naming with presentation. Using templates or components is a good idea because it moves those two concepts into separate contexts.
 * Hard to know what your options are: I'd argue that reading HTML or your CSS source to know what classes are available to you isn't the best way to go about things, that's what styleguides and documentation pages are for. Functional CSS makes documenation generation super duper simple because there aren't components and cases to mock up, just classes that do a single thing.
-* Specificity/The cascade is a feature, not a bug: Folks get up in arms because this "isn't how you write css" learn to use specificity to your advantage and you get cleaner HTML and clean, maintainable CSS. But part of being able to scale your css along with your app and team is minimizing footguns. Specificity is a footgun. A lot of times this is framed as not a CSS problem, not a system problem, but a human problem. If folks were just better at CSS and communicated better while building their product, this wont be an issue. That's like saying that traffic lights shouldn't exist, we should just be better drivers and communicate better with each other.
+* Specificity/The cascade is a feature, not a bug: Folks get up in arms because this "isn't how you write css" learn to use specificity to your advantage and you get cleaner HTML and clean, maintainable CSS. But part of being able to scale your css along with your app and team is minimizing footguns. Specificity is a footgun. A lot of times this is framed as not a CSS problem, not a system problem, but a human problem. If folks were just better at CSS and communicated better while building their product, this wont be an issue. That's like saying that traffic lights shouldn't exist, we should just be better drivers and communicate better with each other. Relying on the cascade more closely couples your UI's structure and style. Relying on tags or the arrangement of specific classnames to make them work locks you into specific markup. This increases the amount of deletion/modification anxiety, because even moving elements around can break styles, and it makes the application of modified styles more brittle. The more deletion/modification anxiety exists, the more likely you are to solve problems by adding more CSS, adding more components, which needlessly increases technical debt, and gradually increases the difficulty of operating in the codebase.
 
 
 
@@ -67,6 +68,12 @@ Differences with inline styles
 
 Making your own functional CSS system
 
+What defines a scalable UI system:
+* Confidence
+* Decoupled: Totally independent of structure; more components does not mean more css
+* Flexible; The existing CSS can serve many different use cases and product directions
+
+
 
 ## Resources
 https://johnpolacek.github.io/the-case-for-atomic-css/
@@ -80,6 +87,10 @@ https://marcelosomers.com/writing/rationalizing-functional-css/
 https://medium.freecodecamp.org/in-defense-of-utility-first-css-4f406acee6fb
 this is some type of bullshit http://www.zeldman.com/2017/01/03/kiss-my-classname/
 http://cssmojo.com/opinions_of_leaders_considered_harmful/
+
+## Examples
+### bad css
+* so with semantic css you're gonna end up with a ton of classes that do the same thing. .link-container, .form-container, etc all do the same flexbox shit and whatnot
 
 ## Frameworks
 http://tachyons.io/

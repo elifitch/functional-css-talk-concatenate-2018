@@ -1,0 +1,21 @@
+<a
+  href="/"
+  class="cursor-pointer round-bold border border--transparent
+    border--blue-on-active bg-white shadow-darken10 
+    shadow-darken10-bold-on-hover transition w-full mb18 px18 
+    py18 flex-parent flex-parent--space-between-main"
+>
+  <div class="flex-parent flex-parent--center-cross">
+    <div>
+      <p class="txt-h5 mb6">Customize a map style</p>
+      <p class="color-gray mb18">Use the style editor to design custom maps.</p>
+      <span class="link">
+        Create a style
+        <img src="..." />
+      </span>
+    </div>
+  </div>
+  <figure class="ml12 flex-child flex-child--no-shrink">
+    <img src="..." class="inline-block align-t w120 h120" />
+  </figure>
+</a>

@@ -51,6 +51,7 @@ import BouncingBall from './components/bouncing-ball';
 import Confetti from './components/confetti';
 import CodeExample from './components/code-example';
 import ImageRow from './components/image-row';
+import LinkBarExample from './components/examples/link-bar-example';
 // Slides
 import LogoRowSlide from './slides/logo-row-slide';
 import EarthPointerSlide from './slides/earth-pointer-slide';
@@ -249,7 +250,8 @@ export default class Presentation extends React.Component {
               `}
             />
             <Notes>
-              This is exactly the type of app where you might expect to see css that looks like this. [Read the list.]
+              This is exactly the type of app where you might expect to see css that is completely off the rails, 
+              and looks like this. [Read the list.]
               but our CSS is....well, it's nice.
             </Notes>
           </Slide>
@@ -291,19 +293,163 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Pic src="functional-atomic.png" />
-            <Annot>[[animated half life 3 confirmed joke here could be funny?]]</Annot>
             <Notes>
               That paradigm is "functional css", which basically means, classes only do one very small thing, and you compose them
               together to make larger things, just like functional programming. This is also sometimes -- often? -- called atomic
               css. I avoid this term because it's often conflated with the atomic css library, and the atomic design pattern coined
-              by brad frost.
+              by brad frost. So I'm going to be calling it functional CSS today.
             </Notes>
           </Slide>
 
           <Slide>
             <WoodyBuzzZoomPan />
             <Notes>
+              What this basically means, in practice, is "utility classes. utiility classes everywhere". I know what you're thinking right.
+              There's this raving madman saying we should use utility classes for everything, talking to you like this.
+              Meanwhile y'all are all feeling like this? 
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <div style={{ width: '60vw', margin: '0 auto' }}>
+              <LinkBarExample />
+            </div>
+            <Notes>
+              Lets look at an example. This is a simple component that I lifted from mapbox studio. It's basically a big link button, 
+              that takes you to the view where you create a custom map style.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <CodeExample source={require('./code-examples/link-bar-html.example')} lang="html" />
+            <Notes>
+              Here's what it might look like in a BEM like system. Not too bad, pretty clean. Good class names.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <CodeExample source={require('./code-examples/link-bar-assembly-html.example')} lang="html" />
+            <Notes>
               
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Pic src="welp.jpg" />
+            <Notes>
+              Show of hands, raise them up if you have this face right now. That's a lie, I see your faces and it's a *lot* more than that.
+              That's okay! This looks crazy, even to me. I get it. These feelings are normal. You're not alone too, some folks see this style 
+              as one of the horsemen of the apocalypse.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Annot>This might be a good place to do a section addressing misconceptions.</Annot>
+            <Annot>I think thats what you're trying to do with this whole zeldman thing, but we need to talk about how "its not just for performance"</Annot>
+            <Annot>Talk about what we're not gonna talk about; focusing on scale, not all the great things about FCSS</Annot>
+            <Notes>
+
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SH>Misconceptions</SH>
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <ListHeading>Misconceptions about functional CSS</ListHeading>
+            <List>
+              <ListItem><Fade>Too verbose.</Fade></ListItem>
+              <ListItem><Fade>Impossible to grok.</Fade></ListItem>
+              <ListItem><Fade>Bends without breaking.</Fade></ListItem>
+              <ListItem><Fade>Puts the many before the few.</Fade></ListItem>
+            </List>
+            <Notes>
+
+            </Notes>
+          </Slide>
+          
+          <Slide>
+            <Pic src="zeldman.jpg" />
+            <Notes>
+              Jeffrey Zeldman put his objections particularly strongly in a post pithily entitled "kiss my classname".
+              He makes some good points in here, and is someone I absolutely respect, so what I'm about to say isn't 
+              meant as some kind of swing at him or his ideas.
+
+              In this post he insists that content-semantic classnames, like "link-bar" are superior to visual-semantic classnames 
+              like "col-3" or "mb-18", because the problems that visual-semantic class naming aims to fix is better addressed 
+              by developers communicating with each other and forming pattern libraries. 
+
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <BlockQuote style={{ maxWidth: 1200 }}>
+              <Quote>But making things easier for yourself and other developers is not your job.</Quote>
+              <Cite>Jeffrey Zeldman</Cite>
+            </BlockQuote>
+            <Notes>
+              In this post, among some excellent points, he says that visually-semantic classnames might be easier for developers 
+              to understand, following that up with this quote "but making things easier for yourself and other developers is not 
+              your job".
+
+              I could not disagree more with this. The easier style becomes for developers, the more quickly we are able to work.
+              This means we can iterate more to find the best solution for users, reduce our surface area for bugs, spare more mental energy 
+              for solving core problems, ship more features critical to our organizations, and yeah, have a better time at work.
+
+              This tacit admission that funcitonal CSS's composed visually semantic class naming makes things easier for us is 
+              the core reason why I think it's a great way to make your UI more scalable. So lets get into it.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Annot>This zeldman spat might not be in the right place; or necessary</Annot>
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <ListHeading>What makes for scalable CSS?</ListHeading>
+            <List>
+              <ListItem><Fade>Inspires confidence.</Fade></ListItem>
+              <ListItem><Fade>Decoupled from as much as possible.</Fade></ListItem>
+              <ListItem><Fade>Bends without breaking.</Fade></ListItem>
+              <ListItem><Fade>Puts the many before the few.</Fade></ListItem>
+            </List>
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SH>Confidence</SH>
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SH>Decoupled</SH>
+            <Notes>
+
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SH>Flexible</SH>
+            <Notes>
+
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SH>Team Oriented</SH>
+            <Notes>
+
             </Notes>
           </Slide>
 
