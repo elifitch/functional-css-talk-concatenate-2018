@@ -1,0 +1,5 @@
+// React
+<LinkBar href="/" icon="brush.svg" />
+
+// Nunjucks 
+{{ LinkBar('/', 'brush.svg') }}

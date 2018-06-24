@@ -362,13 +362,101 @@ export default class Presentation extends React.Component {
           <Slide>
             <ListHeading>Misconceptions about functional CSS</ListHeading>
             <List>
+              <ListItem><Fade>Only good for performance.</Fade></ListItem>
               <ListItem><Fade>Too verbose.</Fade></ListItem>
               <ListItem><Fade>Impossible to grok.</Fade></ListItem>
-              <ListItem><Fade>Bends without breaking.</Fade></ListItem>
-              <ListItem><Fade>Puts the many before the few.</Fade></ListItem>
+              <ListItem><Fade>Defies the cascade.</Fade></ListItem>
+              <ListItem><Fade>May as well just use inline styles lol nothing matters.</Fade></ListItem>
             </List>
             <Notes>
 
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SSH>Performance</SSH>
+            <Notes>
+              First, lets start with the misconception that funcitonal css is only good for performance.
+              It's true that it *is* good for performance, but not that much, and I admit its primary benefits lie in other areas.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Pic src="css-graph.png" />
+            <Notes>
+              This type of chart is often thrown out there by Functional CSS advocates showing that functional CSS 
+              reduces stylesheet size. Because you use a discrete set of utilites to do all your styling, adding more
+              markup, more components, more features DOES NOT mean more CSS, unlike in traditinoal cases, where you would
+              probably create new classes to style the new components. 
+
+              The problem is that compression methods like gzip and brotli make much of this difference irrelevant.
+              Since they replace repeated text with tokens, it matters less than you might think to have repeating 
+              strings of css definitions bound to different classes.
+
+              It's good for other stuff, not performance
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Strength in flexibilty</H>
+            <Annot>[[this might be better later, when discussing strengths]]</Annot>
+            <Notes>
+              The greatest performance benefit from using functional css comes from its ability to be used in many places.
+              That way one stylesheet can be used for a landing page, an app, and many other places. This means that you 
+              can cache that stylesheet and request it only once when in other cases you might need to 
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SSH>Verbosity</SSH>
+            <Notes>
+              Verbosity, is on its surface a reasonable criticism.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <CodeExample source={require('./code-examples/link-bar-assembly-html.example')} lang="html" />
+            <Notes>
+              Functional CSS means composing larger numbers of smaller classes to reach the same outcome. This means that 
+              you will encounter larger numbers of classes on a single element. If you had a whole page of elements that
+              look like this, that would indeed be a complete nightmare. 
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Components are the answer</H>
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <CodeExample source={require('./code-examples/link-bar-component.example')} lang="html" />
+            <Notes>
+              You don't interact with this enormous classname vomit on a day-to-day basis. That verbosity should be stashed 
+              away using a component system. This doesn't mean react component. This pattern can be used in React, Angular, Vue,
+              or even HTML preprocessors like pug, nunjucks and more.
+
+              If you're not using a component system, or template partials, to compose your UI, then you'll have to grapple with 
+              more verbose classes. That said, if you're building a large app where scaling CSS is important, and you're not using 
+              some type of reusable component system, its outside the scope of this talk but you should look at adopting one, 
+              because it will make your life better, I promise.
+            </Notes>
+          </Slide>
+          
+          <Slide>
+            <SSH>Grokkability</SSH>
+            <Annot>Is this section necessary?</Annot>
+            <Notes>
+              First, lets start with the misconception that funcitonal css is only good for performance.
+              It's true that it *is* good for performance, but not that much, and I admit its primary benefits lie in other areas.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SSH>Cascade</SSH>
+            <Notes>
+              
             </Notes>
           </Slide>
           
@@ -415,6 +503,7 @@ export default class Presentation extends React.Component {
           <Slide>
             <ListHeading>What makes for scalable CSS?</ListHeading>
             <List>
+              <ListItem><Fade>Isolates complexity.</Fade></ListItem>
               <ListItem><Fade>Inspires confidence.</Fade></ListItem>
               <ListItem><Fade>Decoupled from as much as possible.</Fade></ListItem>
               <ListItem><Fade>Bends without breaking.</Fade></ListItem>
@@ -422,6 +511,13 @@ export default class Presentation extends React.Component {
             </List>
             <Notes>
               
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SH>Complexity</SH>
+            <Notes>
+
             </Notes>
           </Slide>
 

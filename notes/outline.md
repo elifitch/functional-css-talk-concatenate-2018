@@ -76,17 +76,24 @@ What defines a scalable UI system:
 
 
 ## Resources
+### For/General
 https://johnpolacek.github.io/the-case-for-atomic-css/
-https://css-tricks.com/growing-popularity-atomic-css/
-https://www.smashingmagazine.com/2013/10/challenging-css-best-practices-atomic-approach/
-https://medium.com/simple-human/the-problem-with-atomic-css-d0c09c7aa38e
-https://github.com/chibicode/react-functional-css-protips
 http://mrmrs.github.io/writing/2016/03/24/scalable-css/
+http://mrmrs.cc/writing/2016/03/24/scalable-css/
 https://jon.gold/2015/07/functional-css/
+https://css-tricks.com/lets-define-exactly-atomic-css/
+https://css-tricks.com/growing-popularity-atomic-css/
+https://adamwathan.me/css-utility-classes-and-separation-of-concerns/
+https://www.smashingmagazine.com/2013/10/challenging-css-best-practices-atomic-approach/
+https://github.com/chibicode/react-functional-css-protips
 https://marcelosomers.com/writing/rationalizing-functional-css/
 https://medium.freecodecamp.org/in-defense-of-utility-first-css-4f406acee6fb
-this is some type of bullshit http://www.zeldman.com/2017/01/03/kiss-my-classname/
 http://cssmojo.com/opinions_of_leaders_considered_harmful/
+https://medium.freecodecamp.org/acss-a-dynamic-atomic-css-library-402dff9756e0
+### Against
+https://benfrain.com/oocss-atomic-css-responsive-web-design-anti-pattern/
+this is some type of bullshit http://www.zeldman.com/2017/01/03/kiss-my-classname/
+this is really good https://medium.com/simple-human/the-problem-with-atomic-css-d0c09c7aa38e
 
 ## Examples
 ### bad css
