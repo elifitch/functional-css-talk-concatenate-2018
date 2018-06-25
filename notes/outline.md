@@ -94,6 +94,8 @@ https://medium.freecodecamp.org/acss-a-dynamic-atomic-css-library-402dff9756e0
 https://benfrain.com/oocss-atomic-css-responsive-web-design-anti-pattern/
 this is some type of bullshit http://www.zeldman.com/2017/01/03/kiss-my-classname/
 this is really good https://medium.com/simple-human/the-problem-with-atomic-css-d0c09c7aa38e
+in favor of cascade, against css in js, also includes great examples of what makes CSS hard to scale https://gomakethings.com/whats-wrong-with-css-in-js/
+in favor of cascade https://medium.com/myplanet-musings/stop-worrying-and-learn-to-love-the-cascade-907900eab4e7
 
 ## Examples
 ### bad css

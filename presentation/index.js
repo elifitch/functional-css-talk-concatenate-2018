@@ -363,8 +363,7 @@ export default class Presentation extends React.Component {
             <ListHeading>Misconceptions about functional CSS</ListHeading>
             <List>
               <ListItem><Fade>Only good for performance.</Fade></ListItem>
-              <ListItem><Fade>Too verbose.</Fade></ListItem>
-              <ListItem><Fade>Impossible to grok.</Fade></ListItem>
+              <ListItem><Fade>Too verbose &amp; hard to grok.</Fade></ListItem>
               <ListItem><Fade>Defies the cascade.</Fade></ListItem>
               <ListItem><Fade>May as well just use inline styles lol nothing matters.</Fade></ListItem>
             </List>
@@ -393,11 +392,25 @@ export default class Presentation extends React.Component {
               Since they replace repeated text with tokens, it matters less than you might think to have repeating 
               strings of css definitions bound to different classes.
 
-              It's good for other stuff, not performance
+              It's good for other stuff, not performance, not in this way anyways.
             </Notes>
           </Slide>
 
           <Slide>
+            <Pic src="mapbox-dot-com.jpg" />
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Pic src="mapbox-studio-ui.jpg" />
+            <Notes>
+
+            </Notes>
+          </Slide>
+
+          {/* <Slide>
             <H>Strength in flexibilty</H>
             <Annot>[[this might be better later, when discussing strengths]]</Annot>
             <Notes>
@@ -405,12 +418,12 @@ export default class Presentation extends React.Component {
               That way one stylesheet can be used for a landing page, an app, and many other places. This means that you 
               can cache that stylesheet and request it only once when in other cases you might need to 
             </Notes>
-          </Slide>
+          </Slide> */}
 
           <Slide>
-            <SSH>Verbosity</SSH>
+            <SSH>Verbosity &amp; Grokkability</SSH>
             <Notes>
-              Verbosity, is on its surface a reasonable criticism.
+              Verbosity, is on its surface a reasonable criticism. After all...
             </Notes>
           </Slide>
 
@@ -419,7 +432,7 @@ export default class Presentation extends React.Component {
             <Notes>
               Functional CSS means composing larger numbers of smaller classes to reach the same outcome. This means that 
               you will encounter larger numbers of classes on a single element. If you had a whole page of elements that
-              look like this, that would indeed be a complete nightmare. 
+              look like this, that would indeed be a complete nightmare, that would be hard to read and grok what's going on.
             </Notes>
           </Slide>
 
@@ -443,20 +456,19 @@ export default class Presentation extends React.Component {
               because it will make your life better, I promise.
             </Notes>
           </Slide>
-          
-          <Slide>
-            <SSH>Grokkability</SSH>
-            <Annot>Is this section necessary?</Annot>
-            <Notes>
-              First, lets start with the misconception that funcitonal css is only good for performance.
-              It's true that it *is* good for performance, but not that much, and I admit its primary benefits lie in other areas.
-            </Notes>
-          </Slide>
 
           <Slide>
             <SSH>Cascade</SSH>
             <Notes>
               
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>The cascade is a feature, not a bug.</H>
+            <H><Fade>For us.</Fade></H>
+            <Notes>
+              Show of hands how many folks work on a team where developers who aren't CSS experts write UI code?
             </Notes>
           </Slide>
           
