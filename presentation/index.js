@@ -335,6 +335,13 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
+            <Annot>[[Do a slide showing what all these classes do, and how they are one rule per definition.]]</Annot>
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
             <Pic src="welp.jpg" />
             <Notes>
               Show of hands, raise them up if you have this face right now. That's a lie, I see your faces and it's a *lot* more than that.
@@ -362,63 +369,15 @@ export default class Presentation extends React.Component {
           <Slide>
             <ListHeading>Misconceptions about functional CSS</ListHeading>
             <List>
-              <ListItem><Fade>Only good for performance.</Fade></ListItem>
               <ListItem><Fade>Too verbose &amp; hard to grok.</Fade></ListItem>
               <ListItem><Fade>Defies the cascade.</Fade></ListItem>
-              <ListItem><Fade>May as well just use inline styles lol nothing matters.</Fade></ListItem>
+              <ListItem><Fade>It's basically just inline styles.</Fade></ListItem>
+              <ListItem><Fade>Only good for performance.</Fade></ListItem>
             </List>
             <Notes>
 
             </Notes>
           </Slide>
-
-          <Slide>
-            <SSH>Performance</SSH>
-            <Notes>
-              First, lets start with the misconception that funcitonal css is only good for performance.
-              It's true that it *is* good for performance, but not that much, and I admit its primary benefits lie in other areas.
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <Pic src="css-graph.png" />
-            <Notes>
-              This type of chart is often thrown out there by Functional CSS advocates showing that functional CSS 
-              reduces stylesheet size. Because you use a discrete set of utilites to do all your styling, adding more
-              markup, more components, more features DOES NOT mean more CSS, unlike in traditinoal cases, where you would
-              probably create new classes to style the new components. 
-
-              The problem is that compression methods like gzip and brotli make much of this difference irrelevant.
-              Since they replace repeated text with tokens, it matters less than you might think to have repeating 
-              strings of css definitions bound to different classes.
-
-              It's good for other stuff, not performance, not in this way anyways.
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <Pic src="mapbox-dot-com.jpg" />
-            <Notes>
-              
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <Pic src="mapbox-studio-ui.jpg" />
-            <Notes>
-
-            </Notes>
-          </Slide>
-
-          {/* <Slide>
-            <H>Strength in flexibilty</H>
-            <Annot>[[this might be better later, when discussing strengths]]</Annot>
-            <Notes>
-              The greatest performance benefit from using functional css comes from its ability to be used in many places.
-              That way one stylesheet can be used for a landing page, an app, and many other places. This means that you 
-              can cache that stylesheet and request it only once when in other cases you might need to 
-            </Notes>
-          </Slide> */}
 
           <Slide>
             <SSH>Verbosity &amp; Grokkability</SSH>
@@ -467,12 +426,48 @@ export default class Presentation extends React.Component {
           <Slide>
             <H>The cascade is a feature, not a bug.</H>
             <H><Fade>For us.</Fade></H>
+            <Annot>[[since you're going to talk about making a system accessible to non CSS focused devs later, maybe you can skip this; after all BEM doesn't cascade and people don't hate it so maybe this isn't a big negative misconception after all]]</Annot>
             <Notes>
-              Show of hands how many folks work on a team where developers who aren't CSS experts write UI code?
+              Elegantly using the global nature of CSS along with the cascade lets you elegantly create complex styles with minimal code. The problem is that, well, it's really heckin hard!
+              Show of hands how many folks work on a team where developers who aren't CSS experts write UI code? The cascade probably makes it hard for these folks, and as a result makes your whole team less productive.
+              So it's true that functional CSS doesn't use the cascade, but that's not the worst thing.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SSH>May as well just use inline styles</SSH>
+            <Fade><SSH>lol nothing matters</SSH></Fade>
+            <Notes>
+              If each class does one thing and only one thing, why not just use inline styles?
+              And since we know inline styles are bad, therefore funcitonal CSS is bad. Aha! Gotcha!
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <CodeExample
+              source={require('./code-examples/functional-vs-inline-styles.example')}
+              lang="html"
+            />
+            <Notes>
+              This argument is on the face of it, pretty persuasive. Each of these classes does just one thing, so why not just 
+              use inline styles instead of this?
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <ListHeading>Why functional CSS &gt; inline styles</ListHeading>
+            <List>
+              <ListItem></ListItem>
+              <ListItem></ListItem>
+              <ListItem></ListItem>
+              <ListItem></ListItem>
+            </List>
+            <Notes>
+              
             </Notes>
           </Slide>
           
-          <Slide>
+          {/* <Slide>
             <Pic src="zeldman.jpg" />
             <Notes>
               Jeffrey Zeldman put his objections particularly strongly in a post pithily entitled "kiss my classname".
@@ -509,6 +504,62 @@ export default class Presentation extends React.Component {
             <Annot>This zeldman spat might not be in the right place; or necessary</Annot>
             <Notes>
               
+            </Notes>
+          </Slide> */}
+
+          <Slide>
+            <SSH>Performance</SSH>
+            <Annot>[[This is more discussing a pure benefit than overturning a misconception.]]</Annot>
+            <Notes>
+              First, lets start with the misconception that funcitonal css is *ONLY* good for performance.
+              It *is* good for performance, but it's not *ONLY* good for performance.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Pic src="css-graph.png" />
+            <Notes>
+              This type of chart is often thrown out there by Functional CSS advocates showing that functional CSS
+              reduces stylesheet size. Because you use a discrete set of utilites to do all your styling, adding more
+              markup, more components, more features DOES NOT mean more CSS, unlike in traditinoal cases, where you would
+              probably create new classes to style the new components.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Pic src="css-stats-mapbox.jpg" />
+            <Notes>
+              As a result, our main stylesheet clocks in at just 79kb.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Pic src="css-stats-twitter.jpg" />
+            <Notes>
+              Compare that to twitter which is significantly larger at 600 some odd kb
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Pic src="mapbox-dot-com.jpg" />
+            <Notes>
+              An added benefit is that the same stylesheet used to make a content/marketing page for mapbox.com...
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Pic src="mapbox-studio-ui.jpg" />
+            <Notes>
+              can be used to make a complex application UI for mapbox studio. It's the same stylesheet!
+              This is really nice because it means that you can cache it across products.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Good for more than performance</H>
+            <Notes>
+              But we're not here to talk about why functional CSS is fast. That's a big thing it's known for. We're here to talk
+              about scalability. So lets get into it.
             </Notes>
           </Slide>
 

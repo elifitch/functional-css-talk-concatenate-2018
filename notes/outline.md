@@ -90,6 +90,8 @@ https://marcelosomers.com/writing/rationalizing-functional-css/
 https://medium.freecodecamp.org/in-defense-of-utility-first-css-4f406acee6fb
 http://cssmojo.com/opinions_of_leaders_considered_harmful/
 https://medium.freecodecamp.org/acss-a-dynamic-atomic-css-library-402dff9756e0
+Funcitonal CSS vs inline styles https://github.com/tachyons-css/tachyons/issues/12#issuecomment-59828967
+http://basscss.com/v7/docs/reference/principles/
 ### Against
 https://benfrain.com/oocss-atomic-css-responsive-web-design-anti-pattern/
 this is some type of bullshit http://www.zeldman.com/2017/01/03/kiss-my-classname/
