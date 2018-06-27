@@ -1,0 +1,33 @@
+.bg-white {
+  background-color: #fff !important;
+}
+.color-gray {
+  color: #607d9c !important;
+}
+.flex-parent {
+  display: flex !important;
+}
+.flex-parent--space-between-main {
+  justify-content: space-between !important;
+}
+.flex-parent--center-cross {
+    align-items: center !important;
+}
+.transition {
+  transition: all .125s;
+}
+.px18 {
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+.py18 {
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
+}
+.mb18 {
+  margin-bottom: 18px !important;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}

@@ -129,30 +129,33 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Scaling CSS is <Bounce>easy</Bounce><Bounce>?</Bounce></H>
+            <H>Scaling CSS is <Fade>hard.</Fade><br /><Fade>Right?</Fade></H>
             <Notes>
-
+              "Scaling css is....hard...right?"
             </Notes>
           </Slide>
 
           <Slide>
+            <H>
+              At least
+              <Bounce>.</Bounce>
+              <Bounce>.</Bounce>
+              <Bounce>.</Bounce>
+              <Fade>that's what they tell me.</Fade>
+            </H>
+            <Notes>
+              "at least.......that's what they tell me?"
+              Show of hands, who things CSS is hard to scale.
+              Yeah I can see a pattern developing here, I guess it is hard to scale after all.
+            </Notes>
+          </Slide>
+
+          {/* <Slide>
             <Annot>Some example of complex CSS.</Annot>
             <Notes>
               
             </Notes>
           </Slide>
-          {/* <Slide>
-            <CodeExample
-              source={`
-.foo {
-  bar: 'baz'
-}
-              `}
-            />
-            <Notes>
-              
-            </Notes>
-          </Slide> */}
           <Slide>
             <Annot>But then I need to make [[[some change]]]</Annot>
             <Annot>And then it gets even uglier</Annot>
@@ -185,7 +188,7 @@ export default class Presentation extends React.Component {
             <Notes>
               Who's felt this way before? This famous gif really illustrates the struggle that I'm sure so many of us have faced
             </Notes>
-          </Slide>
+          </Slide> */}
 
           <Slide>
             <H>I have a <Stroke>terrible</Stroke> confession to make.</H>
@@ -199,60 +202,27 @@ export default class Presentation extends React.Component {
             <Pic src="oops.gif" portrait style={{ height: '60vh' }} />
             <Notes>
               Since I started a new job about a year ago, I just haven't had to think about these problems.
+              The system that we use to architect our CSS just....takes care of it. Makes it easy.
             </Notes>
           </Slide>
 
           <Slide>
-            <H>Must be nice!</H>
-            <H>Working on such a simple app.</H>
-            <Bounce><H>Isn't it.&nbsp;</H></Bounce>
-            <Bounce><H>Buddy.&nbsp;</H></Bounce>
-            <Bounce><H>Pal.</H></Bounce>
-            <Annot>
-              [[Do an animation that breaks up this sentence so each word
-              is a fragment that animates its meaning. Words drop in.
-              Simple shrinks maybe.]]
-            </Annot>
+            <Pic src="panda-rage.gif" style={{ height: '60vh' }} />
             <Notes>
-              
+              If you're struggling managing your styles on a large app, 
+              I wouldn't blame you if you felt like this panda bear right now.
+
+              Few things are worse than struggling with a problem and hearing 
+              some smug jerk tell you that they forgot that problem even existed,
+              no matter how facetious they were being.
             </Notes>
           </Slide>
 
           <Slide>
-            <H>Here's the thing about that.</H>
-            <Fade><H>Mapbox Studio is <Stroke>extremely</Stroke> complex.</H></Fade>
+            <Vid src="panda-wiggle.mp4" />
             <Notes>
-              
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <Annot>[[Rip through studio with image and video slides showing dataset editor, style list page, account administration, tileset list, font uploads, image uploads, data uploads, and of course lots and lots AND LOTS of map styling]]</Annot>
-            <Notes>
-              
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <CodeExample
-              source={`
-.dropdown,
-.dropdown--language,
-.dropdown--language--no-german
-.dropdown--language--no-german-or-french,
-.dropdown--not-language,
-.dropdown--large,
-.dropdown--small,
-.dropdown--extra-small
-.dropdown--something-between-small-and-extra-small-like-medium-but-not-too-medium {
-  /* stuff */
-}
-              `}
-            />
-            <Notes>
-              This is exactly the type of app where you might expect to see css that is completely off the rails, 
-              and looks like this. [Read the list.]
-              but our CSS is....well, it's nice.
+              So lets talk about how we ensure our CSS scales, and hopefully
+              by the time I'm done, rage panda will be uhhhh happy...wiggle panda.
             </Notes>
           </Slide>
 
@@ -268,6 +238,20 @@ export default class Presentation extends React.Component {
             <LogoRowSlide />
             <CallFn fn={this.showSocialPoiner} />
             <CallFn fn={this.hideSocialPoiner} />
+          </Slide>
+
+          <Slide>
+            <Annot>[[Rip through studio with image and video slides showing dataset editor, style list page, account administration, tileset list, font uploads, image uploads, data uploads, and of course lots and lots AND LOTS of map styling]]</Annot>
+            <Notes>
+              At work I primarily work on a product called Mapbox Studio, which is a design tool for creating beautiful interactive maps.
+              It's an incredibly complex app as you can see. There's a suite of design tools in here, dataset authoring and management.
+              Data, image, and font uploading, hell, it even has account administration features built in.
+
+              It's a very *very* complex app, exactly the kind of app you'd expect to have totally snarled, awful nasty css, but it doesnt.
+              In fact it only has [[[some kilobytes]]] of app CSS, and like 80% of that is custom illustrations.
+              The rest of our CSS is powered by a CSS library we share with mapbox.com, all our documentation pages, and pretty much everything 
+              else we put out. That library is called "Assembly"
+            </Notes>
           </Slide>
 
           <Slide>
@@ -335,9 +319,9 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Annot>[[Do a slide showing what all these classes do, and how they are one rule per definition.]]</Annot>
+            <CodeExample source={require('./code-examples/link-bar-assembly-css.example')} />
             <Notes>
-              
+
             </Notes>
           </Slide>
 
@@ -345,17 +329,8 @@ export default class Presentation extends React.Component {
             <Pic src="welp.jpg" />
             <Notes>
               Show of hands, raise them up if you have this face right now. That's a lie, I see your faces and it's a *lot* more than that.
-              That's okay! This looks crazy, even to me. I get it. These feelings are normal. You're not alone too, some folks see this style 
-              as one of the horsemen of the apocalypse.
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <Annot>This might be a good place to do a section addressing misconceptions.</Annot>
-            <Annot>I think thats what you're trying to do with this whole zeldman thing, but we need to talk about how "its not just for performance"</Annot>
-            <Annot>Talk about what we're not gonna talk about; focusing on scale, not all the great things about FCSS</Annot>
-            <Notes>
-
+              That's okay! This looks crazy, even to me. I get it. These feelings are normal. When I first started writing functional css, 
+              I felt like I was taking crazy pills. I was used to using 
             </Notes>
           </Slide>
 
@@ -368,6 +343,7 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <ListHeading>Misconceptions about functional CSS</ListHeading>
+            <Annot>[[The misconceptions section is ripe for reduction]]</Annot>
             <List>
               <ListItem><Fade>Too verbose &amp; hard to grok.</Fade></ListItem>
               <ListItem><Fade>Defies the cascade.</Fade></ListItem>
@@ -431,6 +407,7 @@ export default class Presentation extends React.Component {
               Elegantly using the global nature of CSS along with the cascade lets you elegantly create complex styles with minimal code. The problem is that, well, it's really heckin hard!
               Show of hands how many folks work on a team where developers who aren't CSS experts write UI code? The cascade probably makes it hard for these folks, and as a result makes your whole team less productive.
               So it's true that functional CSS doesn't use the cascade, but that's not the worst thing.
+              After all, many CSS paradigms, like BEM, have abandoned the cascade in exchange for simplicity and approachability.
             </Notes>
           </Slide>
 
@@ -508,11 +485,61 @@ export default class Presentation extends React.Component {
           </Slide> */}
 
           <Slide>
-            <SSH>Performance</SSH>
+            <ListHeading>What makes for scalable CSS?</ListHeading>
+            <List>
+              <ListItem><Fade>Isolates complexity.</Fade></ListItem>
+              <ListItem><Fade>Inspires confidence.</Fade></ListItem>
+              <ListItem><Fade>Decoupled from as much as possible.</Fade></ListItem>
+              <ListItem><Fade>Bends without breaking.</Fade></ListItem>
+              <ListItem><Fade>Puts the many before the few.</Fade></ListItem>
+              <ListItem><Fade>Performant.</Fade></ListItem>
+            </List>
+            <Notes>
+              Lets talk about what defines a scalable system. I feel like there are six main points.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SH>Complexity</SH>
+            <Notes>
+
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SH>Confidence</SH>
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SH>Decoupled</SH>
+            <Notes>
+
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SH>Flexible</SH>
+            <Notes>
+
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SH>Team Oriented</SH>
+            <Notes>
+
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SSH>Performant</SSH>
             <Annot>[[This is more discussing a pure benefit than overturning a misconception.]]</Annot>
             <Notes>
-              First, lets start with the misconception that funcitonal css is *ONLY* good for performance.
-              It *is* good for performance, but it's not *ONLY* good for performance.
+              If you've heard about functional CSS before, it's likely that you've heard folks tout its performance benefits.
+              And the performance benefits, especially over time, are enormous.
             </Notes>
           </Slide>
 
@@ -552,63 +579,6 @@ export default class Presentation extends React.Component {
             <Notes>
               can be used to make a complex application UI for mapbox studio. It's the same stylesheet!
               This is really nice because it means that you can cache it across products.
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <H>Good for more than performance</H>
-            <Notes>
-              But we're not here to talk about why functional CSS is fast. That's a big thing it's known for. We're here to talk
-              about scalability. So lets get into it.
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <ListHeading>What makes for scalable CSS?</ListHeading>
-            <List>
-              <ListItem><Fade>Isolates complexity.</Fade></ListItem>
-              <ListItem><Fade>Inspires confidence.</Fade></ListItem>
-              <ListItem><Fade>Decoupled from as much as possible.</Fade></ListItem>
-              <ListItem><Fade>Bends without breaking.</Fade></ListItem>
-              <ListItem><Fade>Puts the many before the few.</Fade></ListItem>
-            </List>
-            <Notes>
-              
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <SH>Complexity</SH>
-            <Notes>
-
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <SH>Confidence</SH>
-            <Notes>
-              
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <SH>Decoupled</SH>
-            <Notes>
-
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <SH>Flexible</SH>
-            <Notes>
-
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <SH>Team Oriented</SH>
-            <Notes>
-
             </Notes>
           </Slide>
 
