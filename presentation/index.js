@@ -346,9 +346,8 @@ export default class Presentation extends React.Component {
             <Annot>[[The misconceptions section is ripe for reduction]]</Annot>
             <List>
               <ListItem><Fade>Too verbose &amp; hard to grok.</Fade></ListItem>
-              <ListItem><Fade>Defies the cascade.</Fade></ListItem>
+              <ListItem><Fade>Breaks inspector workflow.</Fade></ListItem>
               <ListItem><Fade>It's basically just inline styles.</Fade></ListItem>
-              <ListItem><Fade>Only good for performance.</Fade></ListItem>
             </List>
             <Notes>
 
@@ -392,7 +391,7 @@ export default class Presentation extends React.Component {
             </Notes>
           </Slide>
 
-          <Slide>
+          {/* <Slide>
             <SSH>Cascade</SSH>
             <Notes>
               
@@ -408,6 +407,55 @@ export default class Presentation extends React.Component {
               Show of hands how many folks work on a team where developers who aren't CSS experts write UI code? The cascade probably makes it hard for these folks, and as a result makes your whole team less productive.
               So it's true that functional CSS doesn't use the cascade, but that's not the worst thing.
               After all, many CSS paradigms, like BEM, have abandoned the cascade in exchange for simplicity and approachability.
+            </Notes>
+          </Slide> */}
+
+          <Slide>
+            <SSH>Funcitonal CSS &amp; the inspector</SSH>
+            <Notes>
+              There's a vocal contingent of folks that like to make edits to their HTML and CSS in browser devtools and then 
+              bring those changes into code. I am one of these people. These established workflows change when you introduce 
+              functional CSS, so lets talk about what changes and how to get around these new issues.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Editing CSS in the inspector is a pain.</H>
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Annot>[[video of editing a single class in the inspector without issue. link bar.]]</Annot>
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Annot>[[video of editing with assembly in the inspector. link bar.]]</Annot>
+            <Notes>
+              In a funcitonal CSS system, it's not as simple as editing the single class attached to an element. It's more about 
+              adding and removing classes to HTML.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Finding elements can be difficult.</H>
+            <Notes>
+              This opens up a second problem, finding HTML elements without semantic class names can be difficult.
+              If you're using react or some system with ready made tooling, this is less of an issue, since you can use
+              those tools to find your component. If you're using a templating system without tooling...
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Annot>[[code example showing an identifier class or attribute]]</Annot>
+            <Notes>
+              ...I usually attach an identifier data-attribute to make it easier to find. These attributes can be stripped 
+              out when performing a production build if you're worried about increasing the size of your HTML, but honestly 
+              that's not something I'd worry about too much. There are likely bigger performance fish to fry.
             </Notes>
           </Slide>
 
@@ -530,7 +578,7 @@ export default class Presentation extends React.Component {
           <Slide>
             <SH>Team Oriented</SH>
             <Notes>
-
+              Fodder for a slide: "I wrote some CSS! No you wrote some technical debt."
             </Notes>
           </Slide>
 
