@@ -1,3 +1,5 @@
+/* eslint-disable import/no-dynamic-require */
+/* eslint-disable global-require */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { CodePane } from 'spectacle';
@@ -5,7 +7,8 @@ import { css } from 'react-emotion';
 
 require('prismjs/components/prism-css');
 
-function CodeExample({ source, lang }) {
+function CodeExample({ src, lang }) {
+  const source = require(`../code-examples/${src}.example`);
   return (
     <CodePane
       lang={lang}
@@ -27,7 +30,7 @@ CodeExample.defaultProps = {
 };
 
 CodeExample.propTypes = {
-  source: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
   lang: PropTypes.string,
 };
 

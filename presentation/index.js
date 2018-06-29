@@ -305,21 +305,21 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <CodeExample source={require('./code-examples/link-bar-html.example')} lang="html" />
+            <CodeExample src="link-bar-html" lang="html" />
             <Notes>
               Here's what it might look like in a BEM like system. Not too bad, pretty clean. Good class names.
             </Notes>
           </Slide>
 
           <Slide>
-            <CodeExample source={require('./code-examples/link-bar-assembly-html.example')} lang="html" />
+            <CodeExample src="link-bar-assembly-html" lang="html" />
             <Notes>
               
             </Notes>
           </Slide>
 
           <Slide>
-            <CodeExample source={require('./code-examples/link-bar-assembly-css.example')} />
+            <CodeExample src="link-bar-assembly-css" />
             <Notes>
 
             </Notes>
@@ -362,7 +362,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <CodeExample source={require('./code-examples/link-bar-assembly-html.example')} lang="html" />
+            <CodeExample src="link-bar-assembly-html" lang="html" />
             <Notes>
               Functional CSS means composing larger numbers of smaller classes to reach the same outcome. This means that 
               you will encounter larger numbers of classes on a single element. If you had a whole page of elements that
@@ -378,7 +378,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <CodeExample source={require('./code-examples/link-bar-component.example')} lang="html" />
+            <CodeExample src="link-bar-component" lang="html" />
             <Notes>
               You don't interact with this enormous classname vomit on a day-to-day basis. That verbosity should be stashed 
               away using a component system. This doesn't mean react component. This pattern can be used in React, Angular, Vue,
@@ -451,7 +451,9 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Annot>[[code example showing an identifier class or attribute]]</Annot>
+            <CodeExample
+              src="link-bar-identifier"
+            />
             <Notes>
               ...I usually attach an identifier data-attribute to make it easier to find. These attributes can be stripped 
               out when performing a production build if you're worried about increasing the size of your HTML, but honestly 
@@ -470,7 +472,7 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <CodeExample
-              source={require('./code-examples/functional-vs-inline-styles.example')}
+              src="functional-vs-inline-styles"
               lang="html"
             />
             <Notes>
@@ -482,13 +484,35 @@ export default class Presentation extends React.Component {
           <Slide>
             <ListHeading>Why functional CSS &gt; inline styles</ListHeading>
             <List>
-              <ListItem></ListItem>
-              <ListItem></ListItem>
-              <ListItem></ListItem>
-              <ListItem></ListItem>
+              <ListItem><Fade>Aligned to a design system.</Fade></ListItem>
+              <ListItem><Fade>Media queries, pseudo elements, keyframes.</Fade></ListItem>
+              <ListItem><Fade>Rendering speed.</Fade></ListItem>
             </List>
             <Notes>
-              
+              The biggest reason is guardrails, with functional css you can't just set any value to anything you want.
+              You can set say...margin bottom to any value you please with inline styles. With functional CSS you can 
+              only set it to values pre-approved by your design system.
+
+              Functional CSS also supports super important things like media queries, pseudo elements, and keyframe animations,
+              that aren't possible with inline styles.
+
+              Inline styles are scoped to a single element, whereas a functional class has a one to many relationship with elements.
+              With really complex UIs, this is a non trivial difference which *can* (but not always) cause layout jank when using 
+              inline styles instead of Functional CSS.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Pic src="denzel-phew.gif" />
+            <Notes>
+              See, maybe functional CSS isn't as crazy as you might have initially thought...
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SH>Scalability</SH>
+            <Notes>
+              ...And we can talk about how functional CSS can help you scale up your styles.
             </Notes>
           </Slide>
           

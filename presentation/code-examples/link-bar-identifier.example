@@ -1,0 +1,10 @@
+<a
+  data-component="link-bar"
+  href="/"
+  class="cursor-pointer round-bold border border--transparent
+    border--blue-on-active bg-white shadow-darken10 
+    shadow-darken10-bold-on-hover transition w-full mb18 px18 
+    py18 flex-parent flex-parent--space-between-main"
+>
+  ...
+</a>
