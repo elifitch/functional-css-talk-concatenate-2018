@@ -11,7 +11,7 @@
   justify-content: space-between !important;
 }
 .flex-parent--center-cross {
-    align-items: center !important;
+  align-items: center !important;
 }
 .transition {
   transition: all .125s;
@@ -27,7 +27,6 @@
 .mb18 {
   margin-bottom: 18px !important;
 }
-
 .cursor-pointer {
   cursor: pointer !important;
 }

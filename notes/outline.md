@@ -73,11 +73,21 @@ What defines a scalable UI system:
 * Decoupled: Totally independent of structure; more components does not mean more css
 * Flexible; The existing CSS can serve many different use cases and product directions
 
+Using functional CSS
+* Use assembly? maybe. We have our own defaults baked in, but you can clone the project and modify some datafiles to produce new layouts, colors, and so on.
+* Its worth creating your own system
+* There are things I really like about tachyons et al, but they're like bootstrap. Fine for prototyping but make too many decisions for you. I wouldn't necessarily advocate for using them on a production project.
+
+
+Conclusion
+* Not necessarily great for projects of all sizes, that's why I'm specifically talking about funcitonal css in the context of scaling. Functional cSS is great for big apps. It's not something that I'd advocate everywhere all the time
+
+
 
 
 ## Resources
 ### For/General
-https://johnpolacek.github.io/the-case-for-atomic-css/
+list of resources https://johnpolacek.github.io/the-case-for-atomic-css/
 http://mrmrs.github.io/writing/2016/03/24/scalable-css/
 http://mrmrs.cc/writing/2016/03/24/scalable-css/
 https://jon.gold/2015/07/functional-css/

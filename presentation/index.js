@@ -207,6 +207,27 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
+            <H>🖐 Who's lost time this summer<br />debugging style issues?</H>
+            <H><Fade>🗣️ How much time?</Fade></H>
+            <Notes>
+              Have you had to had to wrangle CSS this summer? I wouldn't blame you if so.
+              If you had, just shout it out, how much time have you spent, per day, per week, whatever.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Pic src="kobe-nod.gif" />
+            <Notes>
+              I have spent...zero time debugging styles in the past month at work.
+              In fact I have spent zero time debugging styles at work in the past year.
+              Not some time, not a little bit of time, no time. Zero.
+
+              Not zero time overall, on personal projects I've spend a huge amount of time on this,
+              even making this presentation. But at work, this problem has been solved for me.
+            </Notes>
+          </Slide>
+
+          <Slide>
             <Pic src="panda-rage.gif" style={{ height: '60vh' }} />
             <Notes>
               If you're struggling managing your styles on a large app, 
@@ -256,17 +277,19 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <ImageRow
-              srcs={['assembly.svg', 'david-the-clark.jpg', 'saman.png']}
+              srcs={['assembly.svg', 'david-the-clark.jpg', 'katy-decorah.jpg', 'saman.png', 'dana-sulit.jpg']}
               styleOverrides={[
                 { width: 'auto', height: '50vh' },
                 { borderRadius: '100%' },
                 { borderRadius: '100%' },
+                { borderRadius: '100%' },
+                { borderRadius: '100%' },
               ]}
             />
+            <Annot>[[cleaning this up into a quad grid of images would be good]]</Annot>
             <Notes>
-              Assembly is a css framework we built and use at mapbox. It's primarily the brainchild of David Clark, of Stylelint fame, and 
-              Saman Bemel-Benrud, if you don't know about him, he's done as much for radically custom interactive map design as anybody on 
-              the planet.
+              Assembly is a css framework we built and use at mapbox. It's primarily the brainchild of mapbox developers 
+              David Clark, Katy Decorah, Saman Bemel-Benrud, and Dana Sulit.
               
               Assembly is open source, you're 100% free to use it, I really enjoy it and feel 
               like it's very very well documented, but it's not been designed for widespread use, and I'm not here to tell 
@@ -391,6 +414,50 @@ export default class Presentation extends React.Component {
             </Notes>
           </Slide>
 
+          <Slide>
+            <H>Not incomprehensible</H>
+            <Notes>
+              Functional CSS classes don't have to be incomprehensible gobbledygook either!
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <CodeExample
+              src="atomic-vs-assembly"
+              lang="html"
+            />
+            <Notes>
+              Here's an example. Which one of these buttons has a blue background? 
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H><Stroke>Surprise!</Stroke> <Fade>They both do.</Fade></H>
+            <Notes>
+              Surprise! They both do. But a class named "color-blue" is significantly more grokkable than a hex string.
+              Functional CSS doesn't mean obtuse class names. What it means is class names that describe what a component looks like 
+              like "a blue button" rather than what a component does or represents like "a primary button"
+
+              What this eventually means is that components are not more than the sum of their parts, they are *exactly*,
+               predictably and immutably the sum of their parts.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Not slow.</H>
+            <H><Fade>UI without writing CSS</Fade></H>
+            <Notes>
+              It might seem like it would be incredibly time consuming to type out all those styles, and while it's true there
+              are more classes to type, I contend you work faster. Because you are composing classes rather than writing style 
+              definitions in a CSS file, once you're familiar with the available classes you can create UIs incredibly quickly.
+
+              In fact, at mapbox, we will often design in the browser instead of in a design tool, because assembly permits us 
+              to move so quickly.
+
+              This concept of creating UI without writing CSS is a theme that we'll touch on a couple more times, it's key.
+            </Notes>
+          </Slide>
+
           {/* <Slide>
             <SSH>Cascade</SSH>
             <Notes>
@@ -411,7 +478,7 @@ export default class Presentation extends React.Component {
           </Slide> */}
 
           <Slide>
-            <SSH>Funcitonal CSS &amp; the inspector</SSH>
+            <SSH>Functional CSS &amp; the inspector</SSH>
             <Notes>
               There's a vocal contingent of folks that like to make edits to their HTML and CSS in browser devtools and then 
               bring those changes into code. I am one of these people. These established workflows change when you introduce 
@@ -420,9 +487,10 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Editing CSS in the inspector is a pain.</H>
+            <H>Editing CSS in the inspector is<br />a big part of my workflow.</H>
             <Notes>
-              
+              Editing CSS in the inspector is a big part of my workflow, and something that changes a little bit with functional 
+              css.
             </Notes>
           </Slide>
 
@@ -438,6 +506,9 @@ export default class Presentation extends React.Component {
             <Notes>
               In a funcitonal CSS system, it's not as simple as editing the single class attached to an element. It's more about 
               adding and removing classes to HTML.
+
+              This, to me, is still my least favorite thing about functional css. I'm working on a browser exteinsion that i hope 
+              will make this easier, but for now, this is still a definite downside to me.
             </Notes>
           </Slide>
 
@@ -453,6 +524,7 @@ export default class Presentation extends React.Component {
           <Slide>
             <CodeExample
               src="link-bar-identifier"
+              lang="html"
             />
             <Notes>
               ...I usually attach an identifier data-attribute to make it easier to find. These attributes can be stripped 
@@ -557,14 +629,14 @@ export default class Presentation extends React.Component {
           </Slide> */}
 
           <Slide>
-            <ListHeading>What makes for scalable CSS?</ListHeading>
+            <ListHeading>What makes for scalable software</ListHeading>
             <List>
-              <ListItem><Fade>Isolates complexity.</Fade></ListItem>
-              <ListItem><Fade>Inspires confidence.</Fade></ListItem>
-              <ListItem><Fade>Decoupled from as much as possible.</Fade></ListItem>
-              <ListItem><Fade>Bends without breaking.</Fade></ListItem>
-              <ListItem><Fade>Puts the many before the few.</Fade></ListItem>
               <ListItem><Fade>Performant.</Fade></ListItem>
+              <ListItem><Fade>Isolates complexity.</Fade></ListItem>
+              <ListItem><Fade>Decoupled from as much as possible.</Fade></ListItem>
+              <ListItem><Fade>Puts the many before the few.</Fade></ListItem>
+              <ListItem><Fade>Inspires confidence.</Fade></ListItem>
+              <ListItem><Fade>Bends without breaking.</Fade></ListItem>
             </List>
             <Notes>
               Lets talk about what defines a scalable system. I feel like there are six main points.
@@ -572,46 +644,10 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <SH>Complexity</SH>
-            <Notes>
-
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <SH>Confidence</SH>
-            <Notes>
-              
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <SH>Decoupled</SH>
-            <Notes>
-
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <SH>Flexible</SH>
-            <Notes>
-
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <SH>Team Oriented</SH>
-            <Notes>
-              Fodder for a slide: "I wrote some CSS! No you wrote some technical debt."
-            </Notes>
-          </Slide>
-
-          <Slide>
             <SSH>Performant</SSH>
-            <Annot>[[This is more discussing a pure benefit than overturning a misconception.]]</Annot>
             <Notes>
               If you've heard about functional CSS before, it's likely that you've heard folks tout its performance benefits.
-              And the performance benefits, especially over time, are enormous.
+              And the performance advantages, especially over time, as it scales, are enormous.
             </Notes>
           </Slide>
 
@@ -622,6 +658,13 @@ export default class Presentation extends React.Component {
               reduces stylesheet size. Because you use a discrete set of utilites to do all your styling, adding more
               markup, more components, more features DOES NOT mean more CSS, unlike in traditinoal cases, where you would
               probably create new classes to style the new components.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H></H>
+            <Notes>
+              
             </Notes>
           </Slide>
 
@@ -640,17 +683,222 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Pic src="mapbox-dot-com.jpg" />
+            <H>Cross-product caching</H>
             <Notes>
-              An added benefit is that the same stylesheet used to make a content/marketing page for mapbox.com...
+              We'll get into this more in a moment later, but the ability to use the same stylesheet on multiple pages, multiple 
+              sites, means that this sheet can be cached across products, achieving even greater performance benefits.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SSH>Complexity</SSH>
+            <Notes>
+
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Archeticture is the intentional<br />management of tradeoffs</H>
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Reducing vs. distributing complexity.</H>
+            <Notes>
+              Once a software system reaches a cetain amount of complexity, the greater challenge becomes distriguting rather 
+              than reducing complexity.
+              
+              Functional CSS helps manage complexity by abstracting complexity into a place where it is more easily managed.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Complex CSS is hard to scale</H>
+            <Notes>
+              Scaling CSS is hard enough, scaling complicated CSS becomes much more difficult. Once you start having CSS that 
+              overrides other CSS, nested rules and conditions, making modifications to that CSS beigns to get more and more 
+              difficult. Once your CSS goes "off the rails" it gets harder and harder to put it right again.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Functional CSS isolates<br />complexity in markup</H>
+            <Notes>
+              Functional CSS attemtps to sidestep this problem by keeping CSS a list of utilities, and moving complexity 
+              into how those classes are composed. Essentially it moves complexity into markup. Because markup is easier 
+              to isolate in components or template partials, this tends to be an overall win for scalability.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SSH>Decoupled</SSH>
+            <Notes>
+
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Semantic CSS couples<br />style and components</H>
+            <Notes>
+              CSS classes often serve as a proxy, not just describing how a component looks, which is CSS's job,
+              but also describing what a component is or does.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <CodeExample
+              src="link-bar-html"
+              lang="html"
+            />
+            <Notes>
+              In this example component, we're relying on style definitions to tell us that this component is a link bar,
+              AND tell us what the link bar should look like.
+
+              This means that markup, components, and style are all highly coupled, and it becomes difficult to scale because 
+              when one must change, often so do the others. This has become so normalized that we don't even think about it
+              anymore, but it doesn't have to be this way.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Functional CSS decouples<br />style and components</H>
+            <Notes>
+              With funcitonal CSS, we rely on style utilities to define what a component looks like, and use either a component
+              system, tempalte partials, or even a simple data-attribute to define a component's name and role.
+              
+              This decoupling means that it is far easier to change both markup and styles in isolation.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SSH>Team Oriented</SSH>
+            <Notes>
+              Fodder for a slide: "I wrote some CSS! No you wrote some technical debt."
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>🖐 Who works with devs<br />who aren't CSS focused?</H>
+            <H><Fade>🖐 Do they contribute CSS code?</Fade></H>
+            <H><Fade>🖐 Is that code often instant tech debt?</Fade></H>
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>CSS expertise is <Stroke>rare</Stroke></H>
+            <Notes>
+              We should acknolwedge that CSS is incredibly difficult to write and understand sometimes. 
+              We should also acknowledge that CSS expertise is really rare.
+              It takes a very long time to become an expert in writing CSS.
+              It's both unfair and unrealistic for us to expect that all the developers on our team become
+              CSS experts
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Unencumber our team mates</H>
+            <Notes>
+              Because Functional CSS means you don't have to write CSS to create or modify components, you just have 
+              to know what classes are available. You still have to understand how CSS works, the box model, flex rules,
+              and Grid, but it lowers the barrier to entry by restricting the CSS you "write" to a small subset of 
+              available options.
+
+              This is very important for scalability, because it makes the system more resiliet to a changing or growing team.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SSH>Confidence</SSH>
+            <Annot>[[this is cuttable if we need the time]]</Annot>
+            <Notes>
+              Scalable systems should inspire confidence in implementors. They shouldn't have to hem and haw on decisions
+              worrying if this is the straw that breaks the camel's back.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Exactly the sum of their parts</H>
+            <Notes>
+              I've heart it told before that a sucessful CSS system is more than the sum of its parts.
+              I'm not sure about that, but I am sure that Functional CSS components are *exactly* the sum of their parts.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Classes do one thing</H>
+            <H><Fade>Cannot be overridden</Fade></H>
+            <H><Fade>Source order is irrelevant</Fade></H>
+            <Notes>
+              "classes do one thing, and only that thing"
+              "they cannot be overriden"
+              "and concerns like source ordering are more-or-less irrelevant"
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <BlockQuote>
+              <Quote>"Does exactly what it says on the tin"</Quote>
+            </BlockQuote>
+            <Notes>
+              To put it another way, Functional CSS classes do exactly what it says on the tin. This means they
+              are very simple and can be used with absolute confidence.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SSH>Flexible</SSH>
+            <Annot>[[this section is ripe for cutting]]</Annot>
+            <Notes>
+
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Primitives are adaptable</H>
+            <Notes>
+              Because functional CSS is essentially a list of style primitives, they can be applied to almost anything.
+              At mapbox we've pushed that idea really far, and use the same stylesheet to create everything from...
             </Notes>
           </Slide>
 
           <Slide>
             <Pic src="mapbox-studio-ui.jpg" />
             <Notes>
-              can be used to make a complex application UI for mapbox studio. It's the same stylesheet!
-              This is really nice because it means that you can cache it across products.
+              ...large, furiously complex web applications, like Mapbox Studio
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Pic src="mapbox-dot-com.jpg" />
+            <Notes>
+              To nice, flashy content/marketing pages like on mapbox.com, as well as all our documentation pages and examples.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Write once, ship everywhere</H>
+            <Notes>
+              This means you can write your CSS one time, and then use it to ship any number of new ideas, applications. Or make 
+              sweeping updates to an existing one.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SH>Functional CSS and You</SH>
+            <Notes>
+              All of this is great, and hopefully I've convinced you that functional css is at least worthy of consideration.
+              But what does this really mean for you, how would you integrate functional css into your projects?
+            </Notes>
+          </Slide>
+          
+          <Slide>
+            <H>THE ENDOOOOOO</H>
+            <Notes>
+              
             </Notes>
           </Slide>
 
