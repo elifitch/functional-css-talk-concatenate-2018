@@ -146,7 +146,7 @@ export default class Presentation extends React.Component {
             </H>
             <Notes>
               "at least.......that's what they tell me?"
-              Show of hands, who things CSS is hard to scale.
+              Show of hands, who thinks CSS is hard to scale.
               Yeah I can see a pattern developing here, I guess it is hard to scale after all.
             </Notes>
           </Slide>
@@ -822,17 +822,36 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
+            <Pic src="css-bar-stool.jpg" />
+            <Notes>
+              A few years ago I saw this joke pop up on twitter and thought it was funny, but true, in some codebases. Changing 
+              CSS can have unpredictable results, and this means uncertainty leads to fear. Fear that changes will have bad 
+              side effects.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>No fear.</H>
+            <Notes>
+              One big reason CSS tends to grow over time is because of this fear.
+              Because people are afraid of deleting classes and changing styles, because the
+              results of those actions are unpredictable. Functional CSS lets us create UI without fear.
+            </Notes>
+          </Slide>
+
+          {/* <Slide>
             <H>Exactly the sum of their parts</H>
             <Notes>
               I've heart it told before that a sucessful CSS system is more than the sum of its parts.
               I'm not sure about that, but I am sure that Functional CSS components are *exactly* the sum of their parts.
             </Notes>
-          </Slide>
+          </Slide> */}
 
           <Slide>
-            <H>Classes do one thing</H>
-            <H><Fade>Cannot be overridden</Fade></H>
-            <H><Fade>Source order is irrelevant</Fade></H>
+            <H>Classes do one thing.</H>
+            <H><Fade>Cannot be accidentally overridden.</Fade></H>
+            <H><Fade>Source order is irrelevant.</Fade></H>
+            <H><Fade>Simple, clear, immutable.</Fade></H>
             <Notes>
               "classes do one thing, and only that thing"
               "they cannot be overriden"
@@ -881,7 +900,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Write once, ship everywhere</H>
+            <H>Write once, ship everywhere.</H>
             <Notes>
               This means you can write your CSS one time, and then use it to ship any number of new ideas, applications. Or make 
               sweeping updates to an existing one.
@@ -889,10 +908,36 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <SH>Functional CSS and You</SH>
+            <SH>Get to work</SH>
             <Notes>
               All of this is great, and hopefully I've convinced you that functional css is at least worthy of consideration.
               But what does this really mean for you, how would you integrate functional css into your projects?
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Is Functional CSS for you?</H>
+            <H><Fade>Maybe.</Fade> <Fade>Maybe not.</Fade></H>
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Benefits increase in proportion to scale.</H>
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Is your UI complex?</H>
+            <H>Is your team large?</H>
+            <H>Is project growing quickly?</H>
+            <H>Is your team growing quickly?</H>
+            <H>Do you find yourself writing a lot of CSS for small changes?</H>
+            <Notes>
+              
             </Notes>
           </Slide>
 
@@ -906,6 +951,8 @@ export default class Presentation extends React.Component {
               
               BUt it's not the most ergonomic library in the world. Assebmly is open source, so you can use it 
               but it was really designed for our use case, more than every potential use case in the world.
+              Maybe in the future this will change, and you'll be able to use assebmly to quickly and easily
+              generate a clean custom CSS system, but at the moment, this takes some effort.
             </Notes>
           </Slide>
           
