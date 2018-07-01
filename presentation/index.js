@@ -34,6 +34,7 @@ import {
   BrandCalm,
   Rumble,
   Stroke,
+  AssemblyFrown
 } from './components/anim/index';
 import theme, { contentWidth } from './theme';
 // Individual components
@@ -892,6 +893,19 @@ export default class Presentation extends React.Component {
             <Notes>
               All of this is great, and hopefully I've convinced you that functional css is at least worthy of consideration.
               But what does this really mean for you, how would you integrate functional css into your projects?
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <AssemblyFrown />
+            <Notes>
+              Use assembly? maybe. We have our own defaults baked in, but you can clone the project and modify 
+              some datafiles to produce new layouts, colors, and so on.
+
+              Do the anim.
+              
+              BUt it's not the most ergonomic library in the world. Assebmly is open source, so you can use it 
+              but it was really designed for our use case, more than every potential use case in the world.
             </Notes>
           </Slide>
           

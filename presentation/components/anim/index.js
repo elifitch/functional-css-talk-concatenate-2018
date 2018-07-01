@@ -19,6 +19,7 @@ import FromTopSecondaryAction from './from-top-secondary-action';
 import Rumble from './rumble';
 import BrandEnergetic from './brand-energetic';
 import BrandCalm from './brand-calm';
+import AssemblyFrown from './assembly-frown';
 // import GsapExample from './gsap-example';
 // import DirectAnimExample from './direct-anim-example';
 // import PowerTweenExample from './power-tween-example';
@@ -44,6 +45,7 @@ export {
   Rumble,
   BrandEnergetic,
   BrandCalm,
+  AssemblyFrown
   //
   // GsapExample,
   // DirectAnimExample,
