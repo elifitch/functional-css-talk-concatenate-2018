@@ -924,20 +924,31 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Benefits increase in proportion to scale.</H>
+            <H>I don't use Functional CSS for everything.</H>
+            <H><Fade>Or even most things.</Fade></H>
             <Notes>
-              
+              I don't use functional css for everything. On personal projects I like to write my CSS by hand, mostly because 
+              I don't want to create a design system and functional css classes around that system for small projects, and 
+              also because it's fun to write CSS. I wanted to throw this out there so my enthusiasm for Functional CSS doesn't 
+              come off as blind dogmatism.
             </Notes>
           </Slide>
 
           <Slide>
-            <H>Is your UI complex?</H>
-            <H>Is your team large?</H>
-            <H>Is project growing quickly?</H>
-            <H>Is your team growing quickly?</H>
-            <H>Do you find yourself writing a lot of CSS for small changes?</H>
+            <H>Does CSS ever feel like a stumbling block?</H>
+            <H><Fade>Does it feel that way frequently?</Fade></H>
             <Notes>
-              
+              I feel like the usefulness of functional CSS can be captured with a few questions.
+              If you answered yes to these questions, then functional CSS might be a good fit. I understand the temptation 
+              to dismiss these questions, but I'm willing to bet that many people in this room have worked on a project where 
+              this was the case.
+
+              Whether your CSS is experiencing scaling problems is hard to capture in a slide, but it's likely that you can
+              feel if it's happening.
+
+              If you answered no to these questions, then that's awesome......and also are you hiring? Jokes aside I've worked 
+              in environemnts where funcitonal CSS systems would have been unneccessary, I've worked in environments where they'd 
+              have been overkill. BUt I've also worked in environments where it was remarkably helpful.
             </Notes>
           </Slide>
 
@@ -955,11 +966,91 @@ export default class Presentation extends React.Component {
               generate a clean custom CSS system, but at the moment, this takes some effort.
             </Notes>
           </Slide>
-          
+
           <Slide>
-            <H>THE ENDOOOOOO</H>
+            <Pic src="tachyons-logo.svg" />
             <Notes>
-              
+              You could also use something like tachyons, but this suffers from baked in font families, vertical 
+              rhythm, sizing and spacing that's going to be different from project to project. If you're hacking 
+              Not to trash tachyons, because it's a great library that I've used before on side projects and enjoyed,
+              and was one of several key inspirations for Assembly [[CONFIRM]]
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>It's worth making a system to fit your needs.</H>
+            <Notes>
+              It's worth making your own thing. This doesn't have to be a herculean undertaking, although it can be.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Start with layout and type</H>
+            <H><Fade>everything else will follow.</Fade></H>
+            <Notes>
+              Take a couple hours, and make a set of utilities that establish sizes, vertical rhythim via margin and
+              padding, a grid, and type sizing. Once you have those foundations, you can start making meaningful progress. 
+              When you find yourself writing more style definitions on top of those classes, break them out into their own 
+              utilities. Before you know it, your whole CSS base will be accounted for and you can start converting old 
+              classes into compositions.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Set your guardrails and stick to them.</H>
+            <Notes>
+              When going through this conversion process, resist the temptation to create new classes for weird little edge 
+              cases. Take this opportunity to use your functional css system as a design system, and exicse unneeded exceptions
+              from your design.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SH>TLDR</SH>
+            <Notes>
+              Wrapping up
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Let go of your preconceptions.</H>
+            <Notes>
+              Functional CSS isn't the devil, it's just a different methodology
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Put re-use and decoupled freedom first</H>
+            <Notes>
+              Functional CSS's power flows from two facets: it puts re-use before everything else by restricting CSS to a set 
+              of utilities. It also creates a hard division between the definition of a component's style from a component's role. 
+              All the benefits of functional css: confidence, performance, all the things that make it so scalable flow from these 
+              two points.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Write UI without writing CSS.</H>
+            <Notes>
+              What all these plus points, all the scalability stuff what it all boils down to, is that you're now able to write 
+              UI without writing CSS. This is both a big plus point, and a negative. Hell I enjoy writing CSS, and I bet 
+              plenty of y'all do too.
+
+              This is also why I imagine the reaction to functional CSS as an idea is so visceral. Folks don't want to stop 
+              writing CSS. I get that. I don't want to stop writing CSS either.
+
+              But on large projects, on projects where we first and foremost aim to ship value to users and create a more 
+              inclusive environment for UI development, one where CSS expertise is not a barrier to participation, the 
+              ability to write UI without writing new CSS becomes very valuable.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Don't settle.</H>
+            <Notes>
+              Don't settle for expediency. Don't grab something "off the shelf". A functional CSS system will define your 
+              design, so don't just grab something off the shelf. Tweak it to make it yours, or build something yourself. 
+              Nobody knows your app, your problem, and your users like you do, and your design should reflect that. 
             </Notes>
           </Slide>
 
