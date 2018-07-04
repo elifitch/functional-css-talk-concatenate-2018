@@ -1,27 +1,8 @@
 <button style="
   background-color: #4569F7 !important;
-  background-color: #295b97 !important;
   font-size: 12px !important;
   font-weight: 800 !important;
   border-radius: 9999px !important;
 ">Okay</button>
 
-<button class="bg-blue bg-dark-blue-on-hover txt-s txt-bold round-full">Okay</button>
-
-<style>
-  .bg-blue { 
-    background-color: #4569F7 !important;
-  }
-  .bg-dark-blue-on-hover {
-    background-color: #295b97 !important;
-  }
-  .txt-s {
-    font-size: 12px !important;
-  }
-  .txt-bold {
-    font-weight: 800 !important;
-  }
-  .round-full {
-    border-radius: 9999px !important;
-  }
-</style>
+<button class="bg-blue txt-s txt-bold round-full">Okay</button>

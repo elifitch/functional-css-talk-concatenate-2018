@@ -663,13 +663,6 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H></H>
-            <Notes>
-              
-            </Notes>
-          </Slide>
-
-          <Slide>
             <Pic src="css-stats-mapbox.jpg" />
             <Notes>
               As a result, our main stylesheet clocks in at just 79kb.
@@ -831,7 +824,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>No fear.</H>
+            <H>Fear ➡️ complexity ️ ➡️<br />more fear ➡️ more complexity</H>
             <Notes>
               One big reason CSS tends to grow over time is because of this fear.
               Because people are afraid of deleting classes and changing styles, because the
@@ -848,7 +841,8 @@ export default class Presentation extends React.Component {
           </Slide> */}
 
           <Slide>
-            <H>Classes do one thing.</H>
+            <H>Classes scoped to their element.</H>
+            <H><Fade>Classes do one thing.</Fade></H>
             <H><Fade>Cannot be accidentally overridden.</Fade></H>
             <H><Fade>Source order is irrelevant.</Fade></H>
             <H><Fade>Simple, clear, immutable.</Fade></H>
@@ -953,6 +947,16 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
+            <Pic src="tachyons-logo.svg" />
+            <Notes>
+              You could also use something like tachyons, but this suffers from baked in font families, vertical
+              rhythm, sizing and spacing that's going to be different from project to project. If you're hacking
+              Not to trash tachyons, because it's a great library that I've used before on side projects and enjoyed,
+              and was one of several key inspirations for Assembly [[CONFIRM]]
+            </Notes>
+          </Slide>
+
+          <Slide>
             <AssemblyFrown />
             <Notes>
               Use assembly? maybe. We have our own defaults baked in, but you can clone the project and modify 
@@ -964,16 +968,6 @@ export default class Presentation extends React.Component {
               but it was really designed for our use case, more than every potential use case in the world.
               Maybe in the future this will change, and you'll be able to use assebmly to quickly and easily
               generate a clean custom CSS system, but at the moment, this takes some effort.
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <Pic src="tachyons-logo.svg" />
-            <Notes>
-              You could also use something like tachyons, but this suffers from baked in font families, vertical 
-              rhythm, sizing and spacing that's going to be different from project to project. If you're hacking 
-              Not to trash tachyons, because it's a great library that I've used before on side projects and enjoyed,
-              and was one of several key inspirations for Assembly [[CONFIRM]]
             </Notes>
           </Slide>
 
