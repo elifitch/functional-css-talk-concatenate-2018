@@ -108,11 +108,13 @@ mutableTheme.extendComponent = (pathToComponent, style) => {
 };
 
 mutableTheme = mutableTheme
-
   .extendComponent(['codePane'], {
     fontSize: '1.8rem',
     minWidth: '75%',
     maxWidth: 1600,
+  })
+  .extendComponent(['code'], {
+    fontSize: '0.7em',
   })
   .extendComponent(['quote'], {
     borderLeft: `4px solid ${pink}`,

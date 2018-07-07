@@ -3,13 +3,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   BlockQuote,
-  Cite,
   Quote,
   Deck,
   Heading,
   ListItem,
   List,
   Slide,
+  Code,
   // Image,
   // Text,
   Notes,
@@ -151,45 +151,26 @@ export default class Presentation extends React.Component {
             </Notes>
           </Slide>
 
-          {/* <Slide>
-            <Annot>Some example of complex CSS.</Annot>
-            <Notes>
-              
-            </Notes>
-          </Slide>
-          <Slide>
-            <Annot>But then I need to make [[[some change]]]</Annot>
-            <Annot>And then it gets even uglier</Annot>
-            <Annot>And everything falls apart.</Annot>
-            <Notes>
-
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <H>Oh right. So it turns out scaling CSS is <Bounce>hard.</Bounce></H>
-            <H><Bounce>Really hard.</Bounce></H>
-            <Notes>
-              
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <Hsmall><Bounce>Naming collisions</Bounce></Hsmall>
-            <Hsmall><Bounce>Specificity creep</Bounce></Hsmall>
-            <Hsmall><Bounce>Deletion anxiety</Bounce></Hsmall>
-            <Hsmall>others...</Hsmall>
-            <Notes>
-              
-            </Notes>
-          </Slide>
-
           <Slide>
             <Pic src="peter-griffin-css.gif" />
             <Notes>
-              Who's felt this way before? This famous gif really illustrates the struggle that I'm sure so many of us have faced
+              We see gifs all the time like this
             </Notes>
-          </Slide> */}
+          </Slide>
+
+          <Slide>
+            <Vid src="css-puzzle.mp4" />
+            <Notes>
+              and this
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Pic src="css-bears.gif" />
+            <Notes>
+              We see gifs all the time like this
+            </Notes>
+          </Slide>
 
           <Slide>
             <H>I have a <Stroke>terrible</Stroke> confession to make.</H>
@@ -209,7 +190,7 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <H>🖐 Who's lost time this summer<br />debugging style issues?</H>
-            <H><Fade>🗣️ How much time?</Fade></H>
+            <H><Fade>Was it a lot of time?</Fade></H>
             <Notes>
               Have you had to had to wrangle CSS this summer? I wouldn't blame you if so.
               If you had, just shout it out, how much time have you spent, per day, per week, whatever.
@@ -367,9 +348,9 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <ListHeading>Misconceptions about functional CSS</ListHeading>
-            <Annot>[[The misconceptions section is ripe for reduction]]</Annot>
             <List>
-              <ListItem><Fade>Too verbose &amp; hard to grok.</Fade></ListItem>
+              <ListItem><Fade>Too verbose &amp; slow to write.</Fade></ListItem>
+              <ListItem><Fade>Hard to read.</Fade></ListItem>
               <ListItem><Fade>Breaks inspector workflow.</Fade></ListItem>
               <ListItem><Fade>It's basically just inline styles.</Fade></ListItem>
             </List>
@@ -379,7 +360,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <SSH>Verbosity &amp; Grokkability</SSH>
+            <SSH>Verbosity</SSH>
             <Notes>
               Verbosity, is on its surface a reasonable criticism. After all...
             </Notes>
@@ -396,6 +377,7 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <H>Components are the answer</H>
+            <Annot>[[important to nail this]]</Annot>
             <Notes>
               
             </Notes>
@@ -416,7 +398,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Not incomprehensible</H>
+            <SSH>Grokkability</SSH>
             <Notes>
               Functional CSS classes don't have to be incomprehensible gobbledygook either!
             </Notes>
@@ -445,17 +427,9 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Not slow.</H>
-            <H><Fade>UI without writing CSS</Fade></H>
+            <H>Functional CSS !== unreadable naming</H>
             <Notes>
-              It might seem like it would be incredibly time consuming to type out all those styles, and while it's true there
-              are more classes to type, I contend you work faster. Because you are composing classes rather than writing style 
-              definitions in a CSS file, once you're familiar with the available classes you can create UIs incredibly quickly.
-
-              In fact, at mapbox, we will often design in the browser instead of in a design tool, because assembly permits us 
-              to move so quickly.
-
-              This concept of creating UI without writing CSS is a theme that we'll touch on a couple more times, it's key.
+              
             </Notes>
           </Slide>
 
@@ -487,15 +461,15 @@ export default class Presentation extends React.Component {
             </Notes>
           </Slide>
 
-          <Slide>
+          {/* <Slide>
             <H>Editing CSS in the inspector is<br />a big part of my workflow.</H>
             <Notes>
               Editing CSS in the inspector is a big part of my workflow, and something that changes a little bit with functional 
               css.
             </Notes>
-          </Slide>
+          </Slide> */}
 
-          <Slide>
+          {/* <Slide>
             <Annot>[[video of editing a single class in the inspector without issue. link bar.]]</Annot>
             <Notes>
               
@@ -511,7 +485,7 @@ export default class Presentation extends React.Component {
               This, to me, is still my least favorite thing about functional css. I'm working on a browser exteinsion that i hope 
               will make this easier, but for now, this is still a definite downside to me.
             </Notes>
-          </Slide>
+          </Slide> */}
 
           <Slide>
             <H>Finding elements can be difficult.</H>
@@ -633,10 +607,10 @@ export default class Presentation extends React.Component {
             <ListHeading>What makes for scalable software</ListHeading>
             <List>
               <ListItem><Fade>Performant.</Fade></ListItem>
+              <ListItem><Fade>Inspires confidence.</Fade></ListItem>
               <ListItem><Fade>Isolates complexity.</Fade></ListItem>
               <ListItem><Fade>Decoupled from as much as possible.</Fade></ListItem>
               <ListItem><Fade>Puts the many before the few.</Fade></ListItem>
-              <ListItem><Fade>Inspires confidence.</Fade></ListItem>
               <ListItem><Fade>Bends without breaking.</Fade></ListItem>
             </List>
             <Notes>
@@ -663,6 +637,13 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
+            <H>Write UI without writing CSS</H>
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
             <Pic src="css-stats-mapbox.jpg" />
             <Notes>
               As a result, our main stylesheet clocks in at just 79kb.
@@ -681,6 +662,63 @@ export default class Presentation extends React.Component {
             <Notes>
               We'll get into this more in a moment later, but the ability to use the same stylesheet on multiple pages, multiple 
               sites, means that this sheet can be cached across products, achieving even greater performance benefits.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <SSH>Confidence</SSH>
+            <Notes>
+              Scalable systems should inspire confidence in implementors. They shouldn't have to hem and haw on decisions
+              worrying if this is the straw that breaks the camel's back.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Pic src="css-bar-stool.jpg" />
+            <Notes>
+              A few years ago I saw this joke pop up on twitter and thought it was funny, but true, in some codebases. Changing
+              CSS can have unpredictable results, and this means uncertainty leads to fear. Fear that changes will have bad
+              side effects.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Fear ➡️ complexity ️ ➡️<br />more fear ➡️ more complexity</H>
+            <Notes>
+              One big reason CSS tends to grow over time is because of this fear.
+              Because people are afraid of deleting classes and changing styles, because the
+              results of those actions are unpredictable. Functional CSS lets us create UI without fear.
+            </Notes>
+          </Slide>
+
+          {/* <Slide>
+            <H>Exactly the sum of their parts</H>
+            <Notes>
+              I've heart it told before that a sucessful CSS system is more than the sum of its parts.
+              I'm not sure about that, but I am sure that Functional CSS components are *exactly* the sum of their parts.
+            </Notes>
+          </Slide> */}
+
+          <Slide>
+            <H>Classes scoped to their element.</H>
+            <H><Fade>Classes do one thing.</Fade></H>
+            <H><Fade>Difficult to accidentally override.</Fade></H>
+            <H><Fade>Source order is irrelevant.</Fade></H>
+            <H><Fade>Simple, clear, immutable.</Fade></H>
+            <Notes>
+              "classes do one thing, and only that thing"
+              "they cannot be overriden"
+              "and concerns like source ordering are more-or-less irrelevant"
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <BlockQuote>
+              <Quote>"Does exactly what it says on the tin"</Quote>
+            </BlockQuote>
+            <Notes>
+              To put it another way, Functional CSS classes do exactly what it says on the tin. This means they
+              are very simple and can be used with absolute confidence.
             </Notes>
           </Slide>
 
@@ -709,7 +747,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Complex CSS is hard to scale</H>
+            <H>Complex stylesheets are hard to scale</H>
             <Notes>
               Scaling CSS is hard enough, scaling complicated CSS becomes much more difficult. Once you start having CSS that 
               overrides other CSS, nested rules and conditions, making modifications to that CSS beigns to get more and more 
@@ -806,66 +844,8 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <SSH>Confidence</SSH>
-            <Annot>[[this is cuttable if we need the time]]</Annot>
-            <Notes>
-              Scalable systems should inspire confidence in implementors. They shouldn't have to hem and haw on decisions
-              worrying if this is the straw that breaks the camel's back.
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <Pic src="css-bar-stool.jpg" />
-            <Notes>
-              A few years ago I saw this joke pop up on twitter and thought it was funny, but true, in some codebases. Changing 
-              CSS can have unpredictable results, and this means uncertainty leads to fear. Fear that changes will have bad 
-              side effects.
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <H>Fear ➡️ complexity ️ ➡️<br />more fear ➡️ more complexity</H>
-            <Notes>
-              One big reason CSS tends to grow over time is because of this fear.
-              Because people are afraid of deleting classes and changing styles, because the
-              results of those actions are unpredictable. Functional CSS lets us create UI without fear.
-            </Notes>
-          </Slide>
-
-          {/* <Slide>
-            <H>Exactly the sum of their parts</H>
-            <Notes>
-              I've heart it told before that a sucessful CSS system is more than the sum of its parts.
-              I'm not sure about that, but I am sure that Functional CSS components are *exactly* the sum of their parts.
-            </Notes>
-          </Slide> */}
-
-          <Slide>
-            <H>Classes scoped to their element.</H>
-            <H><Fade>Classes do one thing.</Fade></H>
-            <H><Fade>Cannot be accidentally overridden.</Fade></H>
-            <H><Fade>Source order is irrelevant.</Fade></H>
-            <H><Fade>Simple, clear, immutable.</Fade></H>
-            <Notes>
-              "classes do one thing, and only that thing"
-              "they cannot be overriden"
-              "and concerns like source ordering are more-or-less irrelevant"
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <BlockQuote>
-              <Quote>"Does exactly what it says on the tin"</Quote>
-            </BlockQuote>
-            <Notes>
-              To put it another way, Functional CSS classes do exactly what it says on the tin. This means they
-              are very simple and can be used with absolute confidence.
-            </Notes>
-          </Slide>
-
-          <Slide>
             <SSH>Flexible</SSH>
-            <Annot>[[this section is ripe for cutting]]</Annot>
+            <Annot>[[CUT: could reduce + merge with performance]]</Annot>
             <Notes>
 
             </Notes>
@@ -925,6 +905,8 @@ export default class Presentation extends React.Component {
               I don't want to create a design system and functional css classes around that system for small projects, and 
               also because it's fun to write CSS. I wanted to throw this out there so my enthusiasm for Functional CSS doesn't 
               come off as blind dogmatism.
+
+              If you don't have a component system, its probably not worth switching.
             </Notes>
           </Slide>
 
@@ -979,7 +961,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Start with layout and type</H>
+            <H>Start with layout, type and colors</H>
             <H><Fade>everything else will follow.</Fade></H>
             <Notes>
               Take a couple hours, and make a set of utilities that establish sizes, vertical rhythim via margin and
@@ -987,6 +969,14 @@ export default class Presentation extends React.Component {
               When you find yourself writing more style definitions on top of those classes, break them out into their own 
               utilities. Before you know it, your whole CSS base will be accounted for and you can start converting old 
               classes into compositions.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Will accellerate as you make progress.</H>
+            <H><Fade>Doesn't have to happen all at once.</Fade></H>
+            <Notes>
+              
             </Notes>
           </Slide>
 
