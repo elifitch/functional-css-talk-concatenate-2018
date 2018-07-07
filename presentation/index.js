@@ -611,7 +611,6 @@ export default class Presentation extends React.Component {
               <ListItem><Fade>Isolates complexity.</Fade></ListItem>
               <ListItem><Fade>Decoupled from as much as possible.</Fade></ListItem>
               <ListItem><Fade>Puts the many before the few.</Fade></ListItem>
-              <ListItem><Fade>Bends without breaking.</Fade></ListItem>
             </List>
             <Notes>
               Lets talk about what defines a scalable system. I feel like there are six main points.
@@ -662,6 +661,28 @@ export default class Presentation extends React.Component {
             <Notes>
               We'll get into this more in a moment later, but the ability to use the same stylesheet on multiple pages, multiple 
               sites, means that this sheet can be cached across products, achieving even greater performance benefits.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Pic src="mapbox-studio-ui.jpg" />
+            <Notes>
+              ...large, furiously complex web applications, like Mapbox Studio
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <Pic src="mapbox-dot-com.jpg" />
+            <Notes>
+              To nice, flashy content/marketing pages like on mapbox.com, as well as all our documentation pages and examples.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Write once, ship everywhere.</H>
+            <Notes>
+              This means you can write your CSS one time, and then use it to ship any number of new ideas, applications. Or make
+              sweeping updates to an existing one.
             </Notes>
           </Slide>
 
@@ -840,44 +861,6 @@ export default class Presentation extends React.Component {
               available options.
 
               This is very important for scalability, because it makes the system more resiliet to a changing or growing team.
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <SSH>Flexible</SSH>
-            <Annot>[[CUT: could reduce + merge with performance]]</Annot>
-            <Notes>
-
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <H>Primitives are adaptable</H>
-            <Notes>
-              Because functional CSS is essentially a list of style primitives, they can be applied to almost anything.
-              At mapbox we've pushed that idea really far, and use the same stylesheet to create everything from...
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <Pic src="mapbox-studio-ui.jpg" />
-            <Notes>
-              ...large, furiously complex web applications, like Mapbox Studio
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <Pic src="mapbox-dot-com.jpg" />
-            <Notes>
-              To nice, flashy content/marketing pages like on mapbox.com, as well as all our documentation pages and examples.
-            </Notes>
-          </Slide>
-
-          <Slide>
-            <H>Write once, ship everywhere.</H>
-            <Notes>
-              This means you can write your CSS one time, and then use it to ship any number of new ideas, applications. Or make 
-              sweeping updates to an existing one.
             </Notes>
           </Slide>
 
