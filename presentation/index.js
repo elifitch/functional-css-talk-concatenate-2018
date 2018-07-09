@@ -657,14 +657,6 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Cross-product caching</H>
-            <Notes>
-              We'll get into this more in a moment later, but the ability to use the same stylesheet on multiple pages, multiple 
-              sites, means that this sheet can be cached across products, achieving even greater performance benefits.
-            </Notes>
-          </Slide>
-
-          <Slide>
             <Pic src="mapbox-studio-ui.jpg" />
             <Notes>
               ...large, furiously complex web applications, like Mapbox Studio
@@ -675,6 +667,14 @@ export default class Presentation extends React.Component {
             <Pic src="mapbox-dot-com.jpg" />
             <Notes>
               To nice, flashy content/marketing pages like on mapbox.com, as well as all our documentation pages and examples.
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Cross-product caching</H>
+            <Notes>
+              We'll get into this more in a moment later, but the ability to use the same stylesheet on multiple pages, multiple
+              sites, means that this sheet can be cached across products, achieving even greater performance benefits.
             </Notes>
           </Slide>
 
@@ -721,6 +721,7 @@ export default class Presentation extends React.Component {
           </Slide> */}
 
           <Slide>
+            <Annot>[[Find another way to represent this info, this section blows]]]</Annot>
             <H>Classes scoped to their element.</H>
             <H><Fade>Classes do one thing.</Fade></H>
             <H><Fade>Difficult to accidentally override.</Fade></H>
