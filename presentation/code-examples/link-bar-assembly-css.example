@@ -14,7 +14,7 @@
   align-items: center !important;
 }
 .transition {
-  transition: all .125s;
+  transition: all .125s !important;
 }
 .px18 {
   padding-left: 18px !important;

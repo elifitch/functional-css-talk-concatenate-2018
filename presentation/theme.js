@@ -115,6 +115,9 @@ mutableTheme = mutableTheme
   })
   .extendComponent(['code'], {
     fontSize: '0.7em',
+    fontFamily: 'pinopolis, monospace',
+    borderRadius: '0.1em',
+    padding: '0.1em 0.2em',
   })
   .extendComponent(['quote'], {
     borderLeft: `4px solid ${pink}`,

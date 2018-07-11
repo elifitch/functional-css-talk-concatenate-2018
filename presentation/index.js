@@ -13,6 +13,7 @@ import {
   // Image,
   // Text,
   Notes,
+  Cite,
 } from 'spectacle';
 import {
   Bounce,
@@ -53,6 +54,7 @@ import Confetti from './components/confetti';
 import CodeExample from './components/code-example';
 import ImageRow from './components/image-row';
 import LinkBarExample from './components/examples/link-bar-example';
+import EnvToggle from './components/env-toggle';
 // Slides
 import LogoRowSlide from './slides/logo-row-slide';
 import EarthPointerSlide from './slides/earth-pointer-slide';
@@ -268,7 +270,6 @@ export default class Presentation extends React.Component {
                 { borderRadius: '100%' },
               ]}
             />
-            <Annot>[[cleaning this up into a quad grid of images would be good]]</Annot>
             <Notes>
               Assembly is a css framework we built and use at mapbox. It's primarily the brainchild of mapbox developers 
               David Clark, Katy Decorah, Saman Bemel-Benrud, and Dana Sulit.
@@ -398,9 +399,23 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <SSH>Grokkability</SSH>
+            <SSH>Readability</SSH>
             <Notes>
               Functional CSS classes don't have to be incomprehensible gobbledygook either!
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H>Functional CSS characterized<br />by crazy classnames</H>
+            <Notes>
+              
+            </Notes>
+          </Slide>
+
+          <Slide>
+            <H><Code>D(tbc) Va(m) P(20px) Bgc(#0280ae.5)</Code></H>
+            <Notes>
+              
             </Notes>
           </Slide>
 
@@ -415,7 +430,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H><Stroke>Surprise!</Stroke> <Fade>They both do.</Fade></H>
+            <H><Stroke>Surprise!</Stroke> <Fade>Both of em.</Fade></H>
             <Notes>
               Surprise! They both do. But a class named "color-blue" is significantly more grokkable than a hex string.
               Functional CSS doesn't mean obtuse class names. What it means is class names that describe what a component looks like 
@@ -429,7 +444,8 @@ export default class Presentation extends React.Component {
           <Slide>
             <H>Functional CSS !== unreadable naming</H>
             <Notes>
-              
+              Doesn't necessarily mean crazy classnames, that's an implementation choice taken by some popular functional css
+              libraries but isn't a trait of the 
             </Notes>
           </Slide>
 
@@ -721,22 +737,19 @@ export default class Presentation extends React.Component {
           </Slide> */}
 
           <Slide>
-            <Annot>[[Find another way to represent this info, this section blows]]]</Annot>
-            <H>Classes scoped to their element.</H>
-            <H><Fade>Classes do one thing.</Fade></H>
+            <H>Classes do one thing.</H>
+            <H><Fade>Classes scoped to their element.</Fade></H>
             <H><Fade>Difficult to accidentally override.</Fade></H>
-            <H><Fade>Source order is irrelevant.</Fade></H>
-            <H><Fade>Simple, clear, immutable.</Fade></H>
             <Notes>
-              "classes do one thing, and only that thing"
-              "they cannot be overriden"
-              "and concerns like source ordering are more-or-less irrelevant"
+              At the end of the day what this means is that the cSS itself is *much* simpler, and you'll generally be working 
+              in CSS files less, and in HTML more. This generally means more confidence that what you do wont have side effects 
             </Notes>
           </Slide>
 
           <Slide>
             <BlockQuote>
               <Quote>"Does exactly what it says on the tin"</Quote>
+              <Cite>Some advert???</Cite>
             </BlockQuote>
             <Notes>
               To put it another way, Functional CSS classes do exactly what it says on the tin. This means they
@@ -828,6 +841,7 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <SSH>Team Oriented</SSH>
+            <Annot>[[If we gotta cut one, let it be this one]]</Annot>
             <Notes>
               Fodder for a slide: "I wrote some CSS! No you wrote some technical debt."
             </Notes>
@@ -912,7 +926,7 @@ export default class Presentation extends React.Component {
             </Notes>
           </Slide>
 
-          <Slide>
+          {/* <Slide>
             <Pic src="tachyons-logo.svg" />
             <Notes>
               You could also use something like tachyons, but this suffers from baked in font families, vertical
@@ -920,7 +934,7 @@ export default class Presentation extends React.Component {
               Not to trash tachyons, because it's a great library that I've used before on side projects and enjoyed,
               and was one of several key inspirations for Assembly [[CONFIRM]]
             </Notes>
-          </Slide>
+          </Slide> */}
 
           <Slide>
             <AssemblyFrown />
@@ -957,8 +971,8 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Will accellerate as you make progress.</H>
-            <H><Fade>Doesn't have to happen all at once.</Fade></H>
+            <H>Doesn't have to happen all at once.</H>
+            <H><Fade>Will accellerate as you make progress.</Fade></H>
             <Notes>
               
             </Notes>
