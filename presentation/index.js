@@ -128,7 +128,7 @@ export default class Presentation extends React.Component {
         >
           <Slide >
             <Title lineHeight={1}>Functional CSS at Scale</Title>
-            <Heading size={4} textColor="nearBlack">Clean &amp; Composable UI on a massive app</Heading>
+            <Heading size={4} textColor="nearBlack">Clean &amp; Composable UI on massive apps</Heading>
           </Slide>
 
           <Slide>
