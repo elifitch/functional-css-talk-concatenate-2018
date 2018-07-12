@@ -53,12 +53,18 @@ class Confetti extends React.Component {
     this.ctx = canvas.getContext('2d');
     this.ctx.scale(this.dpr, this.dpr);
 
-    TweenMax.ticker.addEventListener('tick', this.renderCanvas);
-
     window.addEventListener('resize', debounce(this.setCanvasSize, 200));
 
     this.setCanvasSize();
     this.shootConfetti();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.enableConfetti) {
+      TweenMax.ticker.addEventListener('tick', this.renderCanvas);
+    } else {
+      TweenMax.ticker.removeEventListener('tick', this.renderCanvas);
+    }
   }
 
   shouldComponentUpdate(nextProps) {
@@ -92,11 +98,12 @@ class Confetti extends React.Component {
     let i = 0;
     let evenPurple = true;
     let oddPurple = false;
+    const windowSizeModifier = window.innerWidth > 1500 ? 3 : 1;
     while (i < amount) {
       // sprite
       const isEven = i % 2 === 0;
-      const r = random(4, 6) * this.dpr * 0.5;
-      const d = random(15, 25) * this.dpr * 0.5;
+      const r = random(4, 6) * this.dpr * 0.5 * windowSizeModifier;
+      const d = random(15, 25) * this.dpr * 0.5 * windowSizeModifier;
       let colorBase = {};
 
       if (isEven) {
@@ -226,6 +233,7 @@ class Confetti extends React.Component {
 
 Confetti.propTypes = {
   shootConfetti: PropTypes.bool.isRequired,
+  enableConfetti: PropTypes.bool.isRequired,
 };
 
 export default Confetti;

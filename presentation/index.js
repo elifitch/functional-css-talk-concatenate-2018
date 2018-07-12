@@ -19,23 +19,23 @@ import {
   Bounce,
   Fade,
   CallFn,
-  DropIn,
-  FromLeft,
-  FromTop,
-  Anticipation,
-  FollowThrough,
-  Letterwave,
-  Squash,
-  Stretch,
-  FromTopSquashStretch,
-  FromTopFollowThroughFun,
-  FromTopFollowThroughSerious,
-  FromTopSecondaryAction,
-  BrandEnergetic,
-  BrandCalm,
-  Rumble,
+  // DropIn,
+  // FromLeft,
+  // FromTop,
+  // Anticipation,
+  // FollowThrough,
+  // Letterwave,
+  // Squash,
+  // Stretch,
+  // FromTopSquashStretch,
+  // FromTopFollowThroughFun,
+  // FromTopFollowThroughSerious,
+  // FromTopSecondaryAction,
+  // BrandEnergetic,
+  // BrandCalm,
+  // Rumble,
   Stroke,
-  AssemblyFrown
+  AssemblyFrown,
 } from './components/anim/index';
 import theme, { contentWidth } from './theme';
 // Individual components
@@ -48,8 +48,6 @@ import LinkHeading from './components/link-heading';
 import Pic from './components/pic';
 import Vid from './components/vid';
 import Footer from './components/footer';
-import LoginModal from './components/login-modal';
-import BouncingBall from './components/bouncing-ball';
 import Confetti from './components/confetti';
 import CodeExample from './components/code-example';
 import ImageRow from './components/image-row';
@@ -57,10 +55,6 @@ import LinkBarExample from './components/examples/link-bar-example';
 import EnvToggle from './components/env-toggle';
 // Slides
 import LogoRowSlide from './slides/logo-row-slide';
-import EarthPointerSlide from './slides/earth-pointer-slide';
-import DorsalVentralBrain from './slides/dorsal-ventral-brain';
-import ProgressBarDemo from './slides/progress-bar-demo';
-import PapyrusSlide from './slides/papyrus-slide';
 import ThankYouSlide from './slides/thank-you-slide';
 import WoodyBuzzZoomPan from './slides/woody-buzz-zoom-pan';
 
@@ -1036,17 +1030,20 @@ export default class Presentation extends React.Component {
             </Notes>
           </Slide>
 
-          <Slide bgColor="transparent" onActive={this.enableConfetti}>
+          <Slide bgColor="transparent">
             <ThankYouSlide />
+            <CallFn fn={this.enableConfetti} />
             <CallFn fn={this.shootConfetti} />
             <CallFn fn={this.stopConfetti} />
             <Fade><LinkHeading href="http://assets.eli.wtf/talks/animation-talk-fitc-2018">http://assets.eli.wtf/talks/animation-talk-fitc-2018</LinkHeading></Fade>
+            <CallFn fn={this.showSocialPoiner} />
           </Slide>
 
         </Deck>
-        {/* <Confetti
+        <Confetti
+          enableConfetti={this.state.enableConfetti}
           shootConfetti={this.state.fireConfetti}
-        /> */}
+        />
         <Footer
           showSocialPoiner={this.state.showSocialPointer}
         />

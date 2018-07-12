@@ -22,7 +22,7 @@ class ThankYouSlide extends React.Component {
   // Had to use this janky copy pasted text3d thing because using Title, Heading3D here didn't work
   render() {
     return (
-      <div>
+      <div style={{ marginBottom: '2rem' }}>
         <Text3D><Letterwave>Thanks folks!</Letterwave></Text3D>
       </div>
     );
