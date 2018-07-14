@@ -450,7 +450,7 @@ export default class Presentation extends React.Component {
             <List>
               <ListItem><Fade>Too verbose &amp; slow to write.</Fade></ListItem>
               <ListItem><Fade>Hard to read.</Fade></ListItem>
-              <ListItem><Fade>Breaks inspector workflow.</Fade></ListItem>
+              {/* <ListItem><Fade>Breaks inspector workflow.</Fade></ListItem> */}
               <ListItem><Fade>It's basically just inline styles.</Fade></ListItem>
             </List>
             <Notes>
@@ -475,7 +475,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Components are the answer</H>
+            <H>Components are the answer.</H>
             <Annot>[[important to nail this]]</Annot>
             <Notes>
               
@@ -504,7 +504,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Functional CSS characterized<br />by crazy classnames</H>
+            <H>Functional CSS is known <br /> for crazy classnames.</H>
             <Notes>
               
             </Notes>
@@ -566,14 +566,14 @@ export default class Presentation extends React.Component {
             </Notes>
           </Slide> */}
 
-          <Slide>
+          {/* <Slide>
             <SSH>Functional CSS &amp; the inspector</SSH>
             <Notes>
               There's a vocal contingent of folks that like to make edits to their HTML and CSS in browser devtools and then 
               bring those changes into code. I am one of these people. These established workflows change when you introduce 
               functional CSS, so lets talk about what changes and how to get around these new issues.
             </Notes>
-          </Slide>
+          </Slide> */}
 
           {/* <Slide>
             <H>Editing CSS in the inspector is<br />a big part of my workflow.</H>
@@ -601,7 +601,7 @@ export default class Presentation extends React.Component {
             </Notes>
           </Slide> */}
 
-          <Slide>
+          {/* <Slide>
             <H>Finding elements can be difficult.</H>
             <Notes>
               This opens up a second problem, finding HTML elements without semantic class names can be difficult.
@@ -620,7 +620,7 @@ export default class Presentation extends React.Component {
               out when performing a production build if you're worried about increasing the size of your HTML, but honestly 
               that's not something I'd worry about too much. There are likely bigger performance fish to fry.
             </Notes>
-          </Slide>
+          </Slide> */}
 
           <Slide>
             <SSH>May as well just use inline styles</SSH>
@@ -750,7 +750,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Write UI without writing CSS</H>
+            <H>Write UI without writing CSS.</H>
             <Notes>
               
             </Notes>
@@ -785,7 +785,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Cross-product caching</H>
+            <H>Cross-product caching.</H>
             <Notes>
               We'll get into this more in a moment later, but the ability to use the same stylesheet on multiple pages, multiple
               sites, means that this sheet can be cached across products, achieving even greater performance benefits.
@@ -863,7 +863,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Archeticture is the intentional<br />management of tradeoffs</H>
+            <H>Archeticture is the intentional<br />management of tradeoffs.</H>
             <Notes>
               
             </Notes>
@@ -880,7 +880,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Complex stylesheets are hard to scale</H>
+            <H>Complex stylesheets are hard to scale.</H>
             <Notes>
               Scaling CSS is hard enough, scaling complicated CSS becomes much more difficult. Once you start having CSS that 
               overrides other CSS, nested rules and conditions, making modifications to that CSS beigns to get more and more 
@@ -889,7 +889,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Functional CSS isolates<br />complexity in markup</H>
+            <H>Functional CSS isolates<br />complexity in markup.</H>
             <Notes>
               Functional CSS attemtps to sidestep this problem by keeping CSS a list of utilities, and moving complexity 
               into how those classes are composed. Essentially it moves complexity into markup. Because markup is easier 
@@ -905,7 +905,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Semantic CSS couples<br />style and components</H>
+            <H>Semantic CSS couples<br />style and components.</H>
             <Notes>
               CSS classes often serve as a proxy, not just describing how a component looks, which is CSS's job,
               but also describing what a component is or does.
@@ -928,7 +928,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Functional CSS decouples<br />style and components</H>
+            <H>Functional CSS decouples<br />style and components.</H>
             <Notes>
               With funcitonal CSS, we rely on style utilities to define what a component looks like, and use either a component
               system, tempalte partials, or even a simple data-attribute to define a component's name and role.
@@ -955,7 +955,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>CSS expertise is <Stroke>rare</Stroke></H>
+            <H>CSS expertise is <Stroke>rare</Stroke>.</H>
             <Notes>
               We should acknolwedge that CSS is incredibly difficult to write and understand sometimes. 
               We should also acknowledge that CSS expertise is really rare.
@@ -966,7 +966,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Unencumber our team mates</H>
+            <H>Unencumber our team mates.</H>
             <Notes>
               Because Functional CSS means you don't have to write CSS to create or modify components, you just have 
               to know what classes are available. You still have to understand how CSS works, the box model, flex rules,
@@ -1009,6 +1009,7 @@ export default class Presentation extends React.Component {
           <Slide>
             <H>Does CSS ever feel like a stumbling block?</H>
             <H><Fade>Does it feel that way frequently?</Fade></H>
+            <H><Fade>Are you using components?</Fade></H>
             <Notes>
               I feel like the usefulness of functional CSS can be captured with a few questions.
               If you answered yes to these questions, then functional CSS might be a good fit. I understand the temptation 
@@ -1050,7 +1051,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>It's worth making a system to fit your needs.</H>
+            <H>It's worth making a system<br />to fit your needs.</H>
             <Notes>
               It's worth making your own thing. This doesn't have to be a herculean undertaking, although it can be.
             </Notes>
@@ -1100,7 +1101,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <H>Put re-use and decoupled freedom first</H>
+            <H>Put re-use and decoupled freedom first.</H>
             <Notes>
               Functional CSS's power flows from two facets: it puts re-use before everything else by restricting CSS to a set 
               of utilities. It also creates a hard division between the definition of a component's style from a component's role. 
