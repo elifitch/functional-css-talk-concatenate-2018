@@ -168,7 +168,7 @@ export default class Presentation extends React.Component {
             </Notes>
           </Slide>
 
-          <Slide>
+          {/* <Slide>
             <H>I have a <Stroke>terrible</Stroke> confession to make.</H>
             <Fade><H>I forgot this was a thing.</H></Fade>
             <Notes>
@@ -182,7 +182,7 @@ export default class Presentation extends React.Component {
               Since I started a new job about a year ago, I just haven't had to think about these problems.
               The system that we use to architect our CSS just....takes care of it. Makes it easy.
             </Notes>
-          </Slide>
+          </Slide> */}
 
           <Slide>
             <H>🖐 Who's lost time this summer<br />debugging style issues?</H>
@@ -240,7 +240,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Annot>[[Rip through studio with image and video slides showing dataset editor, style list page, account administration, tileset list, font uploads, image uploads, data uploads, and of course lots and lots AND LOTS of map styling]]</Annot>
+            <Pic src="studio-home.jpg" />
             <Notes>
               At work I primarily work on a product called Mapbox Studio, which is a design tool for creating beautiful interactive maps.
               It's an incredibly complex app as you can see. There's a suite of design tools in here, dataset authoring and management.
@@ -249,6 +249,110 @@ export default class Presentation extends React.Component {
               It's a very *very* complex app, exactly the kind of app you'd expect to have totally snarled, awful nasty css, but it doesnt.
               In fact it only has [[[some kilobytes]]] of app CSS, and like 80% of that is custom illustrations.
               The rest of our CSS is powered by a CSS library we share with mapbox.com, all our documentation pages, and pretty much everything 
+              else we put out. That library is called "Assembly"
+            </Notes>
+          </Slide>
+          <Slide>
+            <Pic src="studio-datasets.jpg" />
+            <Notes>
+              At work I primarily work on a product called Mapbox Studio, which is a design tool for creating beautiful interactive maps.
+              It's an incredibly complex app as you can see. There's a suite of design tools in here, dataset authoring and management.
+              Data, image, and font uploading, hell, it even has account administration features built in.
+
+              It's a very *very* complex app, exactly the kind of app you'd expect to have totally snarled, awful nasty css, but it doesnt.
+              In fact it only has [[[some kilobytes]]] of app CSS, and like 80% of that is custom illustrations.
+              The rest of our CSS is powered by a CSS library we share with mapbox.com, all our documentation pages, and pretty much everything
+              else we put out. That library is called "Assembly"
+            </Notes>
+          </Slide>
+          <Slide>
+            <Pic src="studio-style-editor.jpg" />
+            <Notes>
+              At work I primarily work on a product called Mapbox Studio, which is a design tool for creating beautiful interactive maps.
+              It's an incredibly complex app as you can see. There's a suite of design tools in here, dataset authoring and management.
+              Data, image, and font uploading, hell, it even has account administration features built in.
+
+              It's a very *very* complex app, exactly the kind of app you'd expect to have totally snarled, awful nasty css, but it doesnt.
+              In fact it only has [[[some kilobytes]]] of app CSS, and like 80% of that is custom illustrations.
+              The rest of our CSS is powered by a CSS library we share with mapbox.com, all our documentation pages, and pretty much everything
+              else we put out. That library is called "Assembly"
+            </Notes>
+          </Slide>
+          <Slide>
+            <Pic src="studio-fonts.jpg" />
+            <Notes>
+              At work I primarily work on a product called Mapbox Studio, which is a design tool for creating beautiful interactive maps.
+              It's an incredibly complex app as you can see. There's a suite of design tools in here, dataset authoring and management.
+              Data, image, and font uploading, hell, it even has account administration features built in.
+
+              It's a very *very* complex app, exactly the kind of app you'd expect to have totally snarled, awful nasty css, but it doesnt.
+              In fact it only has [[[some kilobytes]]] of app CSS, and like 80% of that is custom illustrations.
+              The rest of our CSS is powered by a CSS library we share with mapbox.com, all our documentation pages, and pretty much everything
+              else we put out. That library is called "Assembly"
+            </Notes>
+          </Slide>
+          <Slide>
+            <Pic src="studio-icons.jpg" />
+            <Notes>
+              At work I primarily work on a product called Mapbox Studio, which is a design tool for creating beautiful interactive maps.
+              It's an incredibly complex app as you can see. There's a suite of design tools in here, dataset authoring and management.
+              Data, image, and font uploading, hell, it even has account administration features built in.
+
+              It's a very *very* complex app, exactly the kind of app you'd expect to have totally snarled, awful nasty css, but it doesnt.
+              In fact it only has [[[some kilobytes]]] of app CSS, and like 80% of that is custom illustrations.
+              The rest of our CSS is powered by a CSS library we share with mapbox.com, all our documentation pages, and pretty much everything
+              else we put out. That library is called "Assembly"
+            </Notes>
+          </Slide>
+          <Slide>
+            <Pic src="studio-curve.jpg" />
+            <Notes>
+              At work I primarily work on a product called Mapbox Studio, which is a design tool for creating beautiful interactive maps.
+              It's an incredibly complex app as you can see. There's a suite of design tools in here, dataset authoring and management.
+              Data, image, and font uploading, hell, it even has account administration features built in.
+
+              It's a very *very* complex app, exactly the kind of app you'd expect to have totally snarled, awful nasty css, but it doesnt.
+              In fact it only has [[[some kilobytes]]] of app CSS, and like 80% of that is custom illustrations.
+              The rest of our CSS is powered by a CSS library we share with mapbox.com, all our documentation pages, and pretty much everything
+              else we put out. That library is called "Assembly"
+            </Notes>
+          </Slide>
+          <Slide>
+            <Pic src="studio-formula.jpg" />
+            <Notes>
+              At work I primarily work on a product called Mapbox Studio, which is a design tool for creating beautiful interactive maps.
+              It's an incredibly complex app as you can see. There's a suite of design tools in here, dataset authoring and management.
+              Data, image, and font uploading, hell, it even has account administration features built in.
+
+              It's a very *very* complex app, exactly the kind of app you'd expect to have totally snarled, awful nasty css, but it doesnt.
+              In fact it only has [[[some kilobytes]]] of app CSS, and like 80% of that is custom illustrations.
+              The rest of our CSS is powered by a CSS library we share with mapbox.com, all our documentation pages, and pretty much everything
+              else we put out. That library is called "Assembly"
+            </Notes>
+          </Slide>
+          <Slide>
+            <Pic src="studio-json.jpg" />
+            <Notes>
+              At work I primarily work on a product called Mapbox Studio, which is a design tool for creating beautiful interactive maps.
+              It's an incredibly complex app as you can see. There's a suite of design tools in here, dataset authoring and management.
+              Data, image, and font uploading, hell, it even has account administration features built in.
+
+              It's a very *very* complex app, exactly the kind of app you'd expect to have totally snarled, awful nasty css, but it doesnt.
+              In fact it only has [[[some kilobytes]]] of app CSS, and like 80% of that is custom illustrations.
+              The rest of our CSS is powered by a CSS library we share with mapbox.com, all our documentation pages, and pretty much everything
+              else we put out. That library is called "Assembly"
+            </Notes>
+          </Slide>
+          <Slide>
+            <Pic src="studio-heatmap.jpg" />
+            <Notes>
+              At work I primarily work on a product called Mapbox Studio, which is a design tool for creating beautiful interactive maps.
+              It's an incredibly complex app as you can see. There's a suite of design tools in here, dataset authoring and management.
+              Data, image, and font uploading, hell, it even has account administration features built in.
+
+              It's a very *very* complex app, exactly the kind of app you'd expect to have totally snarled, awful nasty css, but it doesnt.
+              In fact it only has [[[some kilobytes]]] of app CSS, and like 80% of that is custom illustrations.
+              The rest of our CSS is powered by a CSS library we share with mapbox.com, all our documentation pages, and pretty much everything
               else we put out. That library is called "Assembly"
             </Notes>
           </Slide>
