@@ -133,8 +133,9 @@ export default class Presentation extends React.Component {
 
           <EnvToggle hasSlideChildren env="production">
             <Slide bgColor="#62ffc2">
-              <H size={4}>Hey there, looks like you found my talk on the internet!</H>
-              <H size={4}>If you're interested in speaker notes, press <Code>alt + P</Code> .</H>
+              <H size={4} style={{marginBottom: '0.5em'}}>Hey there, looks like you found my talk on the internet!</H>
+              <H size={4} style={{marginBottom: '0.5em'}}>If you're interested in speaker notes, press <Code>alt + P</Code> .</H>
+              <H size={4} style={{marginBottom: '0.5em'}}>FYI there are some issues with font &amp; video loading on safari that I did not have time to address.</H>
               <H size={4}>It is best viewed at 1920 x 1080 resolution, and I can't guarantee it will look good otherwise.</H>
               <Notes>
                 

@@ -21,11 +21,6 @@ module.exports = {
         "NODE_ENV": JSON.stringify("production")
       }
     }),
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compressor: {
-    //     warnings: false
-    //   }
-    // }),
     new UglifyJSPlugin(),
     ...sharedConfig.plugins
   ],
@@ -34,7 +29,8 @@ module.exports = {
       ...sharedConfig.loaders,
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
+        // exclude: /node_modules/,
+        exclude: /node_modules(?!\/gsap)/,
         loader: "babel-loader"
       },
       {
