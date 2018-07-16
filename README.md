@@ -1,48 +1,5 @@
-# Spectacle Boilerplate
+![Alt text](social-graphic.jpg?raw=true "Functional CSS: Clean and composable UI on a massive app")
+## Functional CSS: Clean & composable UI on massive apps
+This is a talk I gave at Scotland CSS 2018.
 
-## Contents
-
-- [Reference](#reference)
-- [Getting Started](#getting-started)
-- [Build & Deployment](#build-deployment)
-
-## Reference
-
-The Spectacle core API is available at [https://github.com/FormidableLabs/spectacle/blob/master/README.md](https://github.com/FormidableLabs/spectacle/blob/master/README.md).
-
-## Getting Started
-
-After downloading the boilerplate, your first order of business is to open a terminal and run 
-```bash
-yarn
-```
-or 
-```bash
-npm install
-```
-if you're about that life.
-
-Next, run 
-```bash
-rm -R .git
-```
-to remove the existing version control.
-
-Then, to start up the local server, run
-```bash
-npm start
-```
-
-Open a browser and hit [http://localhost:3000](http://localhost:3000), and we are ready to roll.
-
-## Build & Deployment
-
-Building the dist version of the project is as easy as running
-```bash
-npm run build
-```
-
-If you want to deploy the slideshow to surge, run 
-```bash
-npm run deploy
-```
+The slides are available here: [http://assets.eli.wtf/talks/functional-css-scotland-2018](http://assets.eli.wtf/talks/functional-css-scotland-2018), or if you like you can clone and fire up the project.
