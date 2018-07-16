@@ -3,6 +3,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const sharedConfig = require("./webpack.config.shared");
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   entry: [
@@ -20,11 +21,12 @@ module.exports = {
         "NODE_ENV": JSON.stringify("production")
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false
-      }
-    }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compressor: {
+    //     warnings: false
+    //   }
+    // }),
+    new UglifyJSPlugin(),
     ...sharedConfig.plugins
   ],
   module: {

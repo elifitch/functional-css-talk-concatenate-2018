@@ -499,7 +499,6 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <H>Components are the answer.</H>
-            <Annot>[[important to nail this]]</Annot>
             <Notes>
               
             </Notes>
@@ -962,7 +961,6 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <SSH>Team Oriented</SSH>
-            <Annot>[[If we gotta cut one, let it be this one]]</Annot>
             <Notes>
               Fodder for a slide: "I wrote some CSS! No you wrote some technical debt."
             </Notes>
