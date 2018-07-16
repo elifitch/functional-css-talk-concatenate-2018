@@ -122,8 +122,31 @@ export default class Presentation extends React.Component {
         >
           <Slide >
             <Title lineHeight={1}>Functional CSS at Scale</Title>
-            <Heading size={4} textColor="nearBlack">Clean &amp; Composable UI on massive apps</Heading>
+            <Heading
+              size={4}
+              textColor="nearBlack"
+              style={{ marginTop: '0.5em' }}
+            >
+              Clean &amp; Composable UI on massive apps
+            </Heading>
           </Slide>
+
+          <EnvToggle hasSlideChildren env="production">
+            <Slide bgColor="#62ffc2">
+              <H size={4}>Hey there, looks like you found my talk on the internet!</H>
+              <H size={4}>If you're interested in speaker notes, press <Code>alt + P</Code> .</H>
+              <H size={4}>It is best viewed at 1920 x 1080 resolution, and I can't guarantee it will look good otherwise.</H>
+              <Notes>
+                
+              </Notes>
+            </Slide>
+            <Slide bgColor="#62ffc2">
+              <H size={4}>Now, lets start the show!</H>
+              <Notes>
+                
+              </Notes>
+            </Slide>
+          </EnvToggle>
 
           <Slide>
             <H>Scaling CSS is <Fade>hard.</Fade><br /><Fade>Right?</Fade></H>
@@ -1140,7 +1163,7 @@ export default class Presentation extends React.Component {
             <CallFn fn={this.enableConfetti} />
             <CallFn fn={this.shootConfetti} />
             <CallFn fn={this.stopConfetti} />
-            <Fade><LinkHeading href="http://assets.eli.wtf/talks/animation-talk-fitc-2018">http://assets.eli.wtf/talks/animation-talk-fitc-2018</LinkHeading></Fade>
+            <Fade><LinkHeading href="http://assets.eli.wtf/talks/functional-css-scotland-2018">http://assets.eli.wtf/talks/functional-css-scotland-2018</LinkHeading></Fade>
             <CallFn fn={this.showSocialPoiner} />
           </Slide>
 
