@@ -52,7 +52,6 @@ FooterLink.propTypes = {
 };
 
 function Footer({ showSocialPoiner }) {
-  if (showSocialPoiner) { console.log('hi pointy'); }
   return (
     <SFooter>
       <FooterLink href="http://eli.wtf">

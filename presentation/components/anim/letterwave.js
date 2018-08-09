@@ -18,6 +18,7 @@ function Letterwave(props) {
           },
         ],
       ]}
+      forceAnimate={props.forceAnimate}
     >
       <IB>
         <SplitText>
@@ -27,8 +28,13 @@ function Letterwave(props) {
     </PowerTween>
   );
 }
+
+Letterwave.defaultProps = {
+  forceAnimate: false,
+};
 Letterwave.propTypes = {
   children: PropTypes.node.isRequired,
+  forceAnimate: PropTypes.bool,
 };
 
 export default Letterwave;

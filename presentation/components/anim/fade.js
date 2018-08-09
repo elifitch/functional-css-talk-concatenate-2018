@@ -4,6 +4,7 @@ import { Appear } from 'spectacle';
 
 function Fade(props) {
   const divStyle = props.block ? {} : { display: 'inline-block' };
+  const dur = window.ekfDisableAnimations ? 0 : props.transitionDuration;
   return (
     <Appear
       startValue={{
@@ -12,8 +13,8 @@ function Fade(props) {
       endValue={{
         opacity: 1,
       }}
-      transitionDuration={props.transitionDuration}
       {...props}
+      transitionDuration={dur}
     >
       <div style={divStyle}>{props.children}</div>
     </Appear>

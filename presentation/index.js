@@ -81,6 +81,11 @@ export default class Presentation extends React.Component {
     this.enableConfetti = this.enableConfetti.bind(this);
     this.shootConfetti = this.shootConfetti.bind(this);
     this.stopConfetti = this.stopConfetti.bind(this);
+
+    // Talk configuration
+    // If it's not on prod, disable animations, because talk is streamed and animations are janky
+    window.ekfDisableAnimations = process.env.NODE_ENV !== 'production';
+    this.slideTransition = window.ekfDisableAnimations ? ['none'] : ['slide'];
   }
   showSocialPoiner() {
     this.setState({ showSocialPointer: true });
@@ -111,7 +116,7 @@ export default class Presentation extends React.Component {
         onMouseUp={this.stopConfetti}
       >
         <Deck
-          transition={['slide']}
+          transition={this.slideTransition}
           transitionDuration={300}
           theme={theme}
           controls={false}
@@ -120,7 +125,7 @@ export default class Presentation extends React.Component {
           contentHeight={1000}
           progress="bar"
         >
-          <Slide >
+          <Slide>
             <Title lineHeight={1}>Functional CSS at Scale</Title>
             <Heading
               size={4}
@@ -135,9 +140,9 @@ export default class Presentation extends React.Component {
             process.env.NODE_ENV === 'production' && 
             <EnvToggle hasSlideChildren env="production">
               <Slide bgColor="#62ffc2">
-                <H size={4} style={{marginBottom: '0.5em'}}>Hey there, looks like you found my talk on the internet!</H>
-                <H size={4} style={{marginBottom: '0.5em'}}>If you're interested in speaker notes, press <Code>alt + P</Code> .</H>
-                <H size={4} style={{marginBottom: '0.5em'}}>FYI there are some issues with font &amp; video loading on safari that I did not have time to address.</H>
+                <H size={4} style={{ marginBottom: '0.5em' }}>Hey there, looks like you found my talk on the internet!</H>
+                <H size={4} style={{ marginBottom: '0.5em' }}>If you're interested in speaker notes, press <Code>alt + P</Code> .</H>
+                <H size={4} style={{ marginBottom: '0.5em' }}>FYI there are some issues with font &amp; video loading on safari that I did not have time to address.</H>
                 <H size={4}>It is best viewed at 1920 x 1080 resolution, and I can't guarantee it will look good otherwise.</H>
                 <Notes>
                   
@@ -1165,7 +1170,7 @@ export default class Presentation extends React.Component {
             <CallFn fn={this.enableConfetti} />
             <CallFn fn={this.shootConfetti} />
             <CallFn fn={this.stopConfetti} />
-            <Fade><LinkHeading href="http://assets.eli.wtf/talks/functional-css-scotland-2018">http://assets.eli.wtf/talks/functional-css-scotland-2018</LinkHeading></Fade>
+            <Fade><LinkHeading href="http://assets.eli.wtf/talks/functional-css-concatenate-2018">http://assets.eli.wtf/talks/functional-css-concatenate-2018</LinkHeading></Fade>
             <CallFn fn={this.showSocialPoiner} />
           </Slide>
 

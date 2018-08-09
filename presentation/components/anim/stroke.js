@@ -4,15 +4,19 @@ import { Appear } from 'spectacle';
 import { underline } from '../../theme';
 
 function Stroke(props) {
+  const dur = window.ekfDisableAnimations ? 0 : 300;
+  const final = '100% 0.15em';
+  const initial = window.ekfDisableAnimations ? final : '0% 0.15em';
   return (
     <Appear
       startValue={{
-        backgroundSize: '0% 0.15em',
+        backgroundSize: initial,
       }}
       endValue={{
-        backgroundSize: '100% 0.15em',
+        backgroundSize: final,
       }}
       {...props}
+      transitionDuration={dur}
     >
       <div className={underline}>{props.children}</div>
     </Appear>

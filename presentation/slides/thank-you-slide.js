@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'react-emotion';
 // import Title from '../components/title';
-import { Letterwave } from '../components/anim';
+import { Letterwave, Fade } from '../components/anim';
 import { h1FontSize, purple, pink } from '../theme';
 
 function threeDText(color, depth) {
@@ -21,9 +21,14 @@ const Text3D = styled('span')(() => ({
 class ThankYouSlide extends React.Component {
   // Had to use this janky copy pasted text3d thing because using Title, Heading3D here didn't work
   render() {
+    const component = window.ekfDisableAnimations ? (
+      <Fade><Text3D><Letterwave forceAnimate>Thanks folks!</Letterwave></Text3D></Fade>
+    ) : (
+      <Text3D><Letterwave forceAnimate>Thanks folks!</Letterwave></Text3D>
+    );
     return (
       <div style={{ marginBottom: '2rem' }}>
-        <Text3D><Letterwave>Thanks folks!</Letterwave></Text3D>
+        {component}
       </div>
     );
   }

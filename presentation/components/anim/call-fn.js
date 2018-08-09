@@ -5,6 +5,7 @@ import PowerTween from '../power-tween';
 function CallFn({ fn }) {
   return (
     <PowerTween
+      forceAnimate
       anims={[
         [
           {

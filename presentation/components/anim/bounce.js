@@ -15,6 +15,7 @@ function Bounce(props) {
         transform: 'translateY(0em)',
       }}
       easing="bounceOut"
+      transitionDuration={window.ekfDisableAnimations ? 0 : 300}
       {...props}
     >
       <IB>{props.children}</IB>

@@ -33,8 +33,9 @@ class Pointer extends React.Component {
     `;
     const AnimationWrapper = styled('div')(() => {
       if (animated) {
+        const dur = window.ekfDisableAnimations ? 0 : 1;
         return {
-          animation: `${pointerBob} 1s ${animationDelay}ms infinite`,
+          animation: `${pointerBob} ${dur}s ${animationDelay}ms infinite`,
         };
       }
       return {};

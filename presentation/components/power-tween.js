@@ -104,7 +104,8 @@ class PowerTween extends Component {
         const isLastSemgment = segmentIndex === this.props.anims.length - 1;
 
         segment.forEach((tween) => {
-          this.tl[tween.method](tween.target(target), tween.duration, ...tween.args);
+          const dur = window.ekfDisableAnimations && !this.props.forceAnimate ? 0.01 : tween.duration;
+          this.tl[tween.method](tween.target(target), dur, ...tween.args);
         });
 
         this.tl.addLabel(`segment-${segmentIndex}`);
@@ -177,6 +178,7 @@ PowerTween.defaultProps = {
   order: 0,
   inline: false,
   playReverse: false,
+  forceAnimate: false,
 };
 
 PowerTween.propTypes = {
@@ -190,6 +192,7 @@ PowerTween.propTypes = {
   style: PropTypes.object,
   order: PropTypes.number,
   playReverse: PropTypes.bool,
+  forceAnimate: PropTypes.bool, // used to override disabling for callfn
   /* eslint-disable react/no-unused-prop-types */
   inline: PropTypes.bool,
   /* eslint-enable react/no-unused-prop-types */
